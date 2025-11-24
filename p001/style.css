@@ -333,12 +333,12 @@ img {
 /* aba veja mais em noticias */
 
 .vejamais {
-    min-width: 300px;
-    max-width: 810px;
-    margin: auto;
-    margin-top: 20px;
+    margin-top: -20px;
+    margin-bottom: 20px;
+    background-color: var(--cor5);
 }
 
 .vejamais h1 {
     color: white;
+    margin-right: -10px;
 }
