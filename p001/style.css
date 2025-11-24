@@ -308,12 +308,13 @@ img {
     margin-top: 60px;
 }
 
+/* Ajuste para o H1 dentro da classe .fundo funcionar em qualquer página */
 .fundo h1 {
     text-align: center;
     padding-top: 30px;
     background-image: none;
 }
-
+ 
 
 .fundo a {
     text-decoration: none;
