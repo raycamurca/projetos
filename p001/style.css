@@ -245,6 +245,9 @@ img {
 
 .generofav {
     padding: 15px;
+    min-width: 300px;
+    max-width: 810px;
+    margin: auto;
 }
 
 .generofav ul {
@@ -253,6 +256,8 @@ img {
     text-align: center;
     padding: 20px;
     border-radius: 10px;
+    margin-right: -10px;
+    margin-left: -10px;
 }
 
 .generofav h3 {
