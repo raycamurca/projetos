@@ -53,8 +53,9 @@ header h1 {
 }
 
 header p {
-    margin-top: 50px;
+    margin-top: 30px;
     font-family: var(--font-p);
+    padding: -10px;
 }
 
 nav {
