@@ -241,6 +241,10 @@ img {
 
 /* aba recomendações */
 
+.reco {
+    margin-top: -10px;
+    background-color: var(--cor5);
+}
 
 .generofav {
     padding: 15px;
