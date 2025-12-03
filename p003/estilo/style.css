@@ -23,14 +23,12 @@ html, body {
 
 header {
     background-color: black;
-    height: 215px;
     text-align: center;
 }
 
 header h1 {
     color: white;
     padding-top: 50px;
-    padding-bottom: 10px;
     font-size: 10vw;
     font-variant: small-caps;
     font-family: var(--font02);
