@@ -12,7 +12,6 @@
 :root {
     --font01: Verdana, Geneva, Tahoma, sans-serif;
     --font02: "Passion One";
-    --font03: "Sriracha", cursive;
 }
 
 html, body {
@@ -54,8 +53,8 @@ section {
     padding-bottom: 10vh;
     line-height: 2em;
     padding-left: 30px;
-    font-family: var(--font03);
-    font-size: 4vw;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3.7vw;
 }
 
 section p {
