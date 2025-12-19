@@ -1,0 +1,54 @@
+@charset "UTF-8";
+
+body {
+    background-image: linear-gradient(to bottom, #972727, #388e38);
+}
+
+main {
+    width: 600px;
+    height: 400px;
+    display: flex;
+    z-index: 0;
+}
+
+img.celular {
+    display: none;
+}
+
+img.tablet {
+    position: relative;
+    display: block;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    left: -1px;
+}
+
+form {
+    position: relative;
+    top: 90px;
+    left: -70px;
+}
+
+h1 {
+    position: relative;
+    left: 100px;
+    top: 10px;
+    height: 40px;
+}
+
+p.celular {
+    position: relative;
+    top: 1px;
+}
+
+span#icon-senha {
+    position: relative;
+    right: 130px;
+    top: 10px;
+}
+
+input#isenha {
+    position: relative;
+    left: 0px;
+    top: -20px;
+}

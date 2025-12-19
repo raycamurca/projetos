@@ -8,6 +8,7 @@
 
 body {
     background-color: #a22424;
+    background-attachment: fixed;
 }
 
 .center {
@@ -20,7 +21,7 @@ main {
     position: absolute;
     background-color: white;
     display: inline-block;
-    border-radius: 10px;
+    border-radius: 20px;
     background-size: 100% 100%;
     height: 520px;
     width: 307px;
@@ -30,11 +31,15 @@ main {
     transform: translate(-50%, -50%);
 }
 
-main img {
+main img.celular {
     max-width: 307px;
-    border-radius: 10px 10px 0px 0px;
+    border-radius: 20px 20px 0px 0px;
     position: relative;
     top: -1px;
+}
+
+img.tablet {
+    display: none;
 }
 
 main h1 {
@@ -46,6 +51,7 @@ main p {
     text-align: center;
     padding: 10px;
 }
+
 
 form {
     text-align: center;
