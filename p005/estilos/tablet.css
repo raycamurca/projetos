@@ -2,7 +2,7 @@
 
 
 main {
-    width: 600px;
+    width: 670px;
     height: 400px;
     display: flex;
 }
@@ -38,12 +38,12 @@ h1 {
 
 span#icon-senha {
     position: relative;
-    right: 130px;
+    right: 15px;
     top: 10px;
 }
 
 input#isenha {
     position: relative;
-    left: 0px;
-    top: -20px;
+    left: -14px;
+    top: 1px;
 }
