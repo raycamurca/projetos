@@ -25,7 +25,7 @@ main {
     background-size: 100% 100%;
     height: 520px;
     width: 307px;
-
+    flex-direction: row;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -39,6 +39,10 @@ main img.celular {
 }
 
 img.tablet {
+    display: none;
+}
+
+img.telagrande {
     display: none;
 }
 

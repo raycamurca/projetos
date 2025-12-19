@@ -1,17 +1,17 @@
 @charset "UTF-8";
 
-body {
-    background-image: linear-gradient(to bottom, #972727, #388e38);
-}
 
 main {
     width: 600px;
     height: 400px;
     display: flex;
-    z-index: 0;
 }
 
 img.celular {
+    display: none;
+}
+
+img.telagrande {
     display: none;
 }
 
@@ -34,11 +34,6 @@ h1 {
     left: 100px;
     top: 10px;
     height: 40px;
-}
-
-p.celular {
-    position: relative;
-    top: 1px;
 }
 
 span#icon-senha {
