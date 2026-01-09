@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'anime';
+    src: url('/p001/fontes/animefont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --cor0: #0237E6;
+    --cor1: #2145BB;
+    --cor2: #324891;
+    --cor3: #344066;
+    --cor4: #282D3C;
+    --cor5: #2B2D33;
+
+    --font-header: 'anime';
+}
+
