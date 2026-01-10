@@ -46,6 +46,7 @@ header {
     background-color: var(--cor0);
     padding: 10px;
     color: white;
+    
     position: fixed;
     top: 0;
     width: 100%;
