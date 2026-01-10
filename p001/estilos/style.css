@@ -46,8 +46,9 @@ header {
     background-color: var(--cor0);
     padding: 10px;
     color: white;
-    position: sticky;
+    position: fixed;
     top: 0;
+    width: 100%;
     z-index: 1;
 
 }
@@ -93,6 +94,7 @@ main {
     line-height: 1.4em;
     background-color: white;
     margin: auto;
+    margin-top: 80px;
     border-radius: 10px;
 }
 
