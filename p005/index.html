@@ -3,39 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela Login</title>
+    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-    <title>Tela Login - Natal</title>
-    <link rel="stylesheet" href="estilos/style.css" media="all">
-    <link rel="stylesheet" href="estilos/tablet.css" media="screen and (min-width: 700px)">
-    <link rel="stylesheet" href="estilos/telas-grandes.css" media="screen and (min-width: 1200px)">
 </head>
 <body>
-    <div class="center">
-        <main>
-            <img class="celular" src="imagens/natal-celular" alt="valeu-natalina">
-            <img class="tablet" src="imagens/natal-tablet.jpg" alt="valeu-natalina">
-            <img class="telagrande" src="imagens/natal-telas-grandes.jpg" alt="valeu-natalina">
+    <main class="conteiner">
+        <div class="tela-login">
             <h1>Login</h1>
             <form action="" autocomplete="on" method="post">
-                <p>Seja bem-vindo(a). <br> Faça login para acessar sua conta.</p>
-                <span id="icon-email" class="material-symbols-outlined">Person</span>
-                <div class="email">
-                    <label for="iemail"></label>
-                    <input type="email" name="email" id="iemail" required placeholder="seu e-mail" size="25" autocomplete="email">
-                </div>
-                <div class="senha">
-                    <span id="icon-senha" class="material-symbols-outlined">Key</span>
-                    <label for="isenha"></label>
-                    <input type="password" name="senha" id="isenha" required minlength="8" placeholder="sua senha" size="25" autocomplete="current-password">
-                </div>
-                <div class="entrar">
-                    <button class="entrar">Entrar</button>
-                </div>
+                <input type="text" name="usuario" id="iusuario" required placeholder="Usuário" autocomplete="username">
+
+                <input type="password" name="senha" id="isenha" required placeholder="Senha" autocomplete="current-password">
+
                 <div>
-                    <button class="esquecisenha"><p>Esqueci Senha</p><span class="material-symbols-outlined" id="caixa-email">Email</span></button>
+                    <div>
+                        <input type="checkbox" name="lembra" id="ilembra">
+
+                        <label for="ilembra">Lembra-me</label>
+                    </div>
+                    <a href="#">Esqueceu a senha?</a>
                 </div>
+
+                <input type="submit" value="Login">
+
+                <p>Não tem uma conta? <a href="#"><strong>Registrar-se</strong></a></p>
             </form>
-        </main>
-    </div>
+        </div>
+    </main>
 </body>
 </html>
