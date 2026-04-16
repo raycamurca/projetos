@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="src/style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <main class="main-conteiner">
+        <form action="" class="form" novalidate>
+            
+            <h1>Criar Conta</h1>
+
+            <div class="input-conteiner">
+                <div class="div-input">
+                    <label for="inome">Nome</label>
+                    <div class="area-input">
+                        <input type="text" name="nome" id="inome" placeholder="Digite seu nome">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <span class="erro"></span>
+                </div>
+
+                <div class="div-input">
+                    <label for="isobrenome">Sobrenome</label>
+                    <div class="area-input">
+                        <input type="text" name="sobrenome" id="isobrenome" placeholder="Digite seu sobrenome">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <span class="erro"></span>
+                </div>
+
+                <div class="div-input nasc">
+                    <label for="inascimento">Nascimento</label>
+                    <div class="area-input">
+                        <input type="date" name="nascimento" id="inascimento">
+                    </div>
+                    <span class="erro"></span>
+                </div>
+
+                <div class="div-input">
+                    <label for="iemail">Email</label>
+                    <div class="area-input">
+                        <input type="email" name="email" id="iemail" placeholder="email@exemplo.com">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <span class="erro"></span>
+                </div>
+
+                <div class="div-input">
+                    <label for="isenha">Senha</label>
+                    <div class="area-input">
+                        <input type="password" name="senha" id="isenha" placeholder="Crie uma senha" class="senha">
+                        <i class="fa-solid fa-eye-slash icon-senha"></i>
+                    </div>
+                    <span class="erro"></span>
+                </div>
+
+                <div class="div-input">
+                    <label for="iconfirmar">Confirmar senha</label>
+                    <div class="area-input">
+                        <input type="password" name="confirmar" id="iconfirmar" placeholder="Confirme sua senha" class="senha">
+                        <i class="fa-solid fa-eye-slash icon-senha"></i>
+                    </div>
+                    <span class="erro"></span>
+                </div>
+
+                <div class="div-radio">
+                    <p>Gênero</p>    
+                    <input type="radio" name="sexo" id="mas">
+                    <label for="mas">Masculino</label>
+                    <input type="radio" name="sexo" id="fem">
+                    <label for="fem">Feminino</label>
+                </div>
+                <span class="erro genero"></span>
+
+                <button type="submit"><i class="fa-solid fa-check"></i>Criar conta</button>
+            </div>
+        </form>
+        
+    </main>
+
+    <script src="src/javascript/script.js"></script>
+</body>
+</html>

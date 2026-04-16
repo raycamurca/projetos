@@ -1,0 +1,156 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --sombra: 0px 10px 15px -3px rgba(0, 0, 0, 0.2);
+    --azul: #6366f1;
+    --branco: #ffffff;
+    --vermelho: #dc2626;
+    --verde: #22c55e;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--azul);
+    box-shadow: var(--sombra);
+}
+
+.main-conteiner {
+    background-color: var(--branco);
+    padding: 20px;
+    border-radius: 10px;
+    min-width: 650px;
+}
+
+form h1 {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.input-conteiner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.div-input {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label {
+    color: #000000cb;
+}
+
+.area-input {
+    display: flex;
+}
+
+.area-input input {
+    width: 100%;
+    box-shadow: var(--sombra);
+    margin-right: -27px;
+    margin-top: -8px;
+    padding: 5px;
+    border: 1px solid rgba(128, 128, 128, 0.352);
+    border-radius: 5px;
+    height: 35px;
+}
+
+.div-radio {
+    padding: 5px;
+    grid-column: 1/-1;
+}
+
+button {
+    width: 100%;
+    padding: 7px;
+    background-color: var(--azul);
+    color: var(--branco);
+    border: none;
+    border-radius: 8px;
+    grid-column: 1/-1;
+}
+
+button i {
+    color: var(--branco);
+}
+
+.erro {
+    color: var(--vermelho);
+    font-size: 14px;
+    max-width: 300px;
+}
+
+.valido {
+    color: var(--verde);
+}
+
+.div-input.valido label {
+    color: var(--verde);
+}
+
+.div-input.valido .area-input i {
+    color: var(--verde);
+}
+
+.div-input.valido .area-input input {
+    border: 1px solid var(--verde) ;
+}
+
+.genero {
+    font-size: 14px;
+    color: var(--vermelho);
+    margin-top: -10px;
+}
+
+.invalido {
+    color: var(--vermelho);
+}
+
+.div-input.invalido label {
+    color: var(--vermelho);
+}
+
+.div-input.invalido .area-input i {
+    color: var(--vermelho);
+}
+
+.div-input.invalido .area-input input {
+    border: 1px solid var(--vermelho) ;
+}
+
+@media screen and (max-width: 700px){
+
+    body {
+        height: 100%;
+        background-color: var(--branco);
+        box-shadow: none;
+    }
+
+    .main-conteiner {
+        width: 100%;
+        height: 100%;
+        border-radius: 0px;
+    }
+
+    .input-conteiner {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    }
+
+    .main-conteiner {
+    min-width: 250px;
+    }
+}
