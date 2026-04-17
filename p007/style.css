@@ -1,0 +1,244 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+  --fundo-principal: #1A1D21;
+  --texto-principal: #E8E6E3;
+
+  --preto: #000000;
+
+  --circle-background: #1e3a34;
+  --circle-background2: #2a3a44;
+
+  --fundo-cartao: #23262B;
+
+  --cor-primaria: #A8C9EC;
+  --sombra: #a8c9ec50;
+
+  --texto-subdued: #9A9895;
+
+  --cor-destaque: #6BA88E;
+  --branco: #ffffff;
+
+  --cor-sucesso: #7BC096;
+  --texto-sobre-sucesso: #E0F0E8;
+
+  --cor-erro: #D98A80;
+  --texto-sobre-erro: #FDF5F4;
+
+  --cor-input: #3A3E44;
+
+  --borda: #8080804c;
+}
+
+/* BODY */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    color: var(--texto-principal);
+    background: 
+    radial-gradient(circle at left, var(--circle-background2), transparent 30%),
+    radial-gradient(circle at right, var(--circle-background), transparent 20%),
+    var(--fundo-principal);
+}
+
+/* MAIN */
+
+.conteiner-main {
+    display: flex;
+    flex-direction: column;
+    min-width: 750px;
+    padding: 50px;
+}
+
+/* TOPO */
+
+.topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icon-title {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.icon-title .icon {
+    display: flex;
+    height: 50px;
+    width: 50px;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--circle-background2);
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.icon-title .icon i {
+    color: var(--cor-primaria);
+    font-size: 20px;
+}
+
+.title p {
+    color: var(--texto-subdued);
+}
+
+.card-tema {
+    display: flex;
+    height: 50px;
+    width: 50px;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--fundo-cartao);
+    padding: 10px;
+    border-radius: 50%;
+    border: 1px solid var(--borda);
+}
+
+.card-tema button {
+    background-color: var(--fundo-cartao);
+    border: none;
+    outline: none;
+}
+
+.card-tema button i {
+    color: var(--texto-subdued);
+    font-size: 19px;
+    transition: all .5s;
+}
+
+.card-tema button i:hover {
+    color: var(--texto-principal);
+    font-size: 22px;
+}
+
+/* CENTRO */
+
+.conteiner-input {
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 40px;
+}
+
+#input-tarefa {
+    min-width: 100%;
+    height: 55px;
+    background-color: var(--fundo-cartao);
+    border: 1px solid var(--borda);
+    outline: none;
+    padding: 20px;
+    border-radius: 20px;
+    color: var(--texto-principal);
+}
+
+#input-tarefa::placeholder {
+    color: var(--texto-subdued);
+}
+
+#input-tarefa:focus {
+    outline: 1px solid var(--cor-primaria);
+    
+    box-shadow: 
+    0 0 5px rgba(168, 201, 236, 0.6),
+    0 0 10px rgba(168, 201, 236, 0.5),
+    0 0 20px rgba(168, 201, 236, 0.4);
+}
+
+.bt-add-tarefa {
+    position: relative;
+    left: -120px;
+    background-color: var(--cor-primaria);
+    color: var(--fundo-cartao);
+    border: none;
+    min-width: 100px;
+    height: 35px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* AREA FILTRO */
+
+.area-filtro {
+    background-color: var(--fundo-cartao);
+    border: 1px solid var(--borda);
+    width: fit-content;
+    padding: 5px;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+.area {
+    background-color: transparent;
+    color: var(--texto-subdued);
+    border: none;
+    padding: 7px;
+}
+
+.ativa {
+    color: var(--preto) !important; 
+    background-color: var(--cor-primaria);
+    border-radius: 20px;
+    padding: 5px 20px;
+}
+
+/* area-display */
+
+.area-display {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--fundo-cartao);
+    min-height: 300px;
+    margin-top: 20px;
+    border: 1px solid var(--borda);
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.icon-msg {
+    display: flex;
+    height: 50px;
+    width: 50px;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--cor-destaque);
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.msg-secundaria p {
+    color: var(--texto-subdued);
+    text-align: center;
+}
+
+.dica {
+    margin-top: 30px;
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+}
+
+@media screen and (max-width: 700px) {
+    .conteiner-main {
+    min-width: 100%;
+    }
+
+    .title h1 {
+        font-size: 20px;
+    }
+}
