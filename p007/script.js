@@ -44,8 +44,6 @@ btAddTarefa.addEventListener("click", ()=>{
         </div>`
     }
 
-    console.log(display.children.length);
-
     const btApagar = document.querySelectorAll(".apagar");
 
     btApagar.forEach(icon => {
@@ -75,4 +73,3 @@ btAddTarefa.addEventListener("click", ()=>{
 })
 
 // apagar tarefa
-
