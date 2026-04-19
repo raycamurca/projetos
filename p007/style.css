@@ -218,6 +218,19 @@ button {
     padding: 10px;
 }
 
+.area-display.tarefa-on {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: stretch;
+    background-color: transparent;
+    min-height: 300px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+}
+
 .icon-msg {
     display: flex;
     height: 50px;
@@ -232,6 +245,32 @@ button {
 .msg-secundaria p {
     color: var(--texto-subdued);
     text-align: center;
+}
+
+.card-tarefa {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--fundo-cartao);
+    height: 50px;
+    border-radius: 20px;
+    padding: 20px;
+    border: 1px solid var(--borda);
+    margin-bottom: 5px;
+}
+
+.icon-tarefa {
+    display: flex;
+    gap: 5px;
+}
+
+.icons {
+    display: flex;
+    gap: 20px;
+}
+
+.fa-trash-can {
+    color: var(--cor-erro);
 }
 
 .dica {
