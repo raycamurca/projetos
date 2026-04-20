@@ -1,38 +1,60 @@
 @charset "UTF-8";
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 :root {
   --fundo-principal: #1A1D21;
   --texto-principal: #E8E6E3;
-
   --preto: #000000;
-
-  --circle-background: #1e3a34;
-  --circle-background2: #2a3a44;
-
   --fundo-cartao: #23262B;
-
   --cor-primaria: #A8C9EC;
   --sombra: #a8c9ec50;
-
-  --texto-subdued: #9A9895;
-
+  --texto-cinza: #9A9895;
   --cor-destaque: #6BA88E;
   --branco: #ffffff;
-
   --cor-sucesso: #7BC096;
   --texto-sobre-sucesso: #E0F0E8;
-
   --cor-erro: #D98A80;
-  --texto-sobre-erro: #FDF5F4;
-
-  --cor-input: #3A3E44;
-
   --borda: #8080804c;
+  --font: "Poppins", sans-serif;
 }
 
+
+#bt-desk {
+  display: none;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  font-family: var(--font);
+  color: var(--branco);
+  background-color: var(--fundo-principal);
+  padding: 50px;
+}
+
+.conteiner {
+  border: 1px solid var(--borda);
+  width: 100%;
+  max-width: 650px;
+  padding: 25px;
+}
+
+.card-title {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.icon-tarefa {
+  background-color: red;
+  border-radius: 50%;
+  padding: 10px;
+}

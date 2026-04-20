@@ -8,7 +8,75 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    
+    <main class="conteiner">
+        <div class="topo">
+            <div class="card-title">
+                <div class="icon-tarefa">
+                    <i class="fa-solid fa-list-check"></i>
+                </div>
+                
+                <div class="title-info">
+                    <h1>Minhas tarefas</h1>
+                    <p>0 pendentes · 0 concluídas</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="centro">
+            <input type="text" name="tarefa" id="itarefa" placeholder="o que você precisa fazer?">
+            <button class="bt-add-tarefa" id="bt-cell">+</button>
+            <button class="bt-add-tarefa" id="bt-desk">+ Adicionar</button>
+        </div>
+
+        <div class="areas">
+            <button class="todas" conteudo-id="todas">todas</button>
+            <button class="pendentes" conteudo-id="pendentes">pendentes</button>
+            <button class="concluidas" conteudo-id="concluidas">concluídas</button>
+        </div>
+
+        <div class="conteudos">
+            <div class="conteudo" id="todas">
+                <div class="icon-conteudo">
+                    <i class="fa-solid fa-check"></i>
+                </div>
+                <div class="info-one">
+                    <h2>Sua lista está vazia</h2>
+                </div>
+                <div class="info-two">
+                    <p>Adicione sua primeira tarefa para começar.</p>
+                </div>
+            </div>
+
+            <div class="conteudo" id="pendentes">
+                <div class="icon-conteudo">
+                    <i class="fa-solid fa-check"></i>
+                </div>
+                <div class="info-one">
+                    <h2>Tudo em dia</h2>
+                </div>
+                <div class="info-two">
+                    <p>Mude o filtro para ver outras tarefas.</p>
+                </div>
+            </div>
+
+            <div class="conteudo" id="concluidas">
+                <div class="icon-conteudo">
+                    <i class="fa-solid fa-check"></i>
+                </div>
+                <div class="info-one">
+                    <h2>Nada concluído ainda</h2>
+                </div>
+                <div class="info-two">
+                    <p>Mude o filtro para ver outras tarefas.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="dica">
+            <p>Dica: dê um duplo clique em uma tarefa para editar.</p>
+        </div>
+
+    </main>
     <script src="script.js"></script>
 </body>
 </html>
