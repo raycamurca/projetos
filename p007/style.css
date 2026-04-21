@@ -31,6 +31,14 @@ body {
   background-color: var(--fundo-principal);
 }
 
+.visivel {
+  display: flex;
+}
+
+.invisivel {
+  display: none;
+}
+
 /* MAIN */
 
 .conteiner {
@@ -142,6 +150,24 @@ body {
   margin-top: 10px;
   border-radius: 20px;
   padding: 10px;
+}
+
+.conteudo-todos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.conteudo-pendentes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.conteudo-concluido {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .card-tarefa {

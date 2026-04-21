@@ -1,0 +1,13 @@
+<div class="card-tarefa pendente">
+    <div class="tarefa">
+        <div class="card-icon-concluido">
+            <i class="fa-regular fa-circle"></i>
+        </div>
+        <p class = "descricao">
+            Tarefa
+        </p>
+    </div>
+    <div class="card-delete">
+        <i class="fa-regular fa-trash-can"></i>
+    </div>
+</div>
