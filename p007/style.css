@@ -31,30 +31,190 @@
 }
 
 body {
-  display: flex;
-  justify-content: center;
-  min-height: 100vh;
   font-family: var(--font);
   color: var(--branco);
   background-color: var(--fundo-principal);
-  padding: 50px;
 }
 
+/* MAIN */
+
 .conteiner {
-  border: 1px solid var(--borda);
+  height: 100vh;
   width: 100%;
-  max-width: 650px;
-  padding: 25px;
+  max-width: 730px;
+  padding: 20px;
+  margin: auto;
 }
+
+/* TOPO */
 
 .card-title {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 10px;
 }
 
 .icon-tarefa {
-  background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  background-color: var(--fundo-cartao);
   border-radius: 50%;
+  padding: 15px;
+}
+
+.icon-tarefa i {
+  color: var(--cor-primaria);
+  font-size: 20px;
+}
+
+.title-info h1 {
+  font-size: 25px;
+}
+
+.title-info p {
+  color: var(--texto-cinza);
+  font-size: 15px;
+}
+
+/* CENTRO */
+
+.centro {
+  display: flex;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+#itarefa {
+  width: 100%;
+  height: 50px;
+  border: 1px solid var(--borda);
+  outline: none;
+  background-color: var(--fundo-cartao);
+  color: var(--branco);
+  border-radius: 10px;
   padding: 10px;
+  font-size: 17px;
+}
+
+#itarefa:focus {
+  border: 2px solid var(--cor-primaria);
+}
+
+.bt-add-tarefa {
+  width: 50px;
+  background-color: var(--cor-primaria);
+  border: none;
+  border-radius: 10px;
+}
+
+/* AREAS */
+
+.areas {
+  margin-top: 20px;
+  background-color: var(--fundo-cartao);
+  width: fit-content;
+  padding: 5px;
+  border-radius: 20px;
+  border: 1px solid var(--borda);
+}
+
+.areas button {
+  background-color: transparent;
+  border: none;
+  color: var(--texto-cinza);
+  padding: 5px;
+  border-radius: 20px;
+}
+
+.areas button.ativo {
+  color: var(--preto);
+  background-color: var(--cor-primaria);
+}
+
+/* CONTEUDO */
+
+.conteudos {
+  background-color: var(--fundo-cartao);
+  min-height: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  border-radius: 20px;
+}
+
+.conteudo {
+  display: none;
+}
+
+.conteudo.show {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-conteudo {
+  background-color: var(--cor-destaque);
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.info-one {
+  font-size: 14px;
+}
+
+.info-two {
+  color: var(--texto-cinza);
+  text-align: center;
+  font-size: 14px;
+}
+
+.dica {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 13px;
+}
+
+@media screen and (min-width: 651px) {
+  #bt-desk {
+    display: block;
+    font-size: 17px;
+  }
+
+  #bt-cell {
+    display: none;
+  }
+
+  .bt-add-tarefa {
+    width: 150px;
+  }
+
+  .info-one {
+    font-size: 17px;
+  }
+
+  .info-two {
+    font-size: 15px;
+  }
+
+  .dica {
+    font-size: 15px;
+  }
+
+  .areas button {
+    font-size: 17px;
+  }
+  
+  button:hover {
+    cursor: pointer;
+  }
 }
