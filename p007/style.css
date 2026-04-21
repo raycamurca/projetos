@@ -25,11 +25,6 @@
   --font: "Poppins", sans-serif;
 }
 
-
-#bt-desk {
-  display: none;
-}
-
 body {
   font-family: var(--font);
   color: var(--branco);
@@ -104,10 +99,11 @@ body {
 }
 
 .bt-add-tarefa {
-  width: 50px;
+  width: 70px;
   background-color: var(--cor-primaria);
   border: none;
   border-radius: 10px;
+  font-size: 30px;
 }
 
 /* AREAS */
@@ -138,17 +134,39 @@ body {
 
 .conteudos {
   background-color: var(--fundo-cartao);
-  min-height: 350px;
+  min-height: fit-content;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-top: 20px;
+  /* align-items: center; */
+  justify-content: stretch;
+  margin-top: 10px;
   border-radius: 20px;
+  padding: 10px;
+}
+
+.card-tarefa {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background-color: var(--fundo-principal);
+  border: 1px solid var(--borda);
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 10px;
+}
+
+.tarefa {
+  display: flex;
+  gap: 7px;
+}
+
+.card-delete i:hover {
+  color: var(--cor-erro);
 }
 
 .conteudo {
   display: none;
+  margin-top: 5px; 
 }
 
 .conteudo.show {
@@ -185,17 +203,8 @@ body {
 }
 
 @media screen and (min-width: 651px) {
-  #bt-desk {
-    display: block;
-    font-size: 17px;
-  }
-
-  #bt-cell {
-    display: none;
-  }
-
   .bt-add-tarefa {
-    width: 150px;
+    width: 100px;
   }
 
   .info-one {
