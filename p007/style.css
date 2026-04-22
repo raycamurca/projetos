@@ -216,6 +216,10 @@ body {
   font-size: 14px;
 }
 
+.fa-circle, .fa-circle-check {
+  font-size: 25px;
+}
+
 .info-two {
   color: var(--texto-cinza);
   text-align: center;
@@ -226,6 +230,14 @@ body {
   margin-top: 10px;
   text-align: center;
   font-size: 13px;
+}
+
+.erro {
+  color: #ff4d4d;
+}
+
+.verde {
+  color: var(--cor-sucesso);
 }
 
 @media screen and (min-width: 651px) {

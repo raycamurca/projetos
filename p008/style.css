@@ -1,0 +1,226 @@
+:root {
+  /* ================= CORES BASE ================= */
+  --cor-branco: #FFFFFF;
+  --cor-creme: #FEF9F1;
+  --cor-texto: #200A05;
+  --cor-texto-suave: #553B32;
+  --cor-borda: #DECEBC;
+
+  /* ================= CORES DE DESTAQUE ================= */
+  --cor-amarelo: #EDAA00;
+  --cor-laranja: #E34D00;
+  --cor-vermelho: #D40E14;
+  --cor-whatsapp: #03A14A;
+
+  /* ================= GRADIENTES ================= */
+  --gradiente-primario: linear-gradient(
+    135deg,
+    #EDAA00 0%,
+    #E34D00 50%,
+    #D40E14 100%
+  );
+
+  --gradiente-diferenciais: linear-gradient(
+    180deg,
+    #FFF7EA 0%,
+    #FFE7CE 100%
+  );
+
+  /* ================= SOMBRAS ================= */
+  --sombra-padrao: #00000026;
+  --sombra-hover: #E34D0059;
+
+  /* ================= TRANSPARÊNCIAS ================= */
+  --branco-fraco: #FFFFFF1A;
+  --branco-medio: #FFFFFF33;
+
+  /* ================= HERO ================= */
+  --inicio-fundo-overlay: linear-gradient(
+    180deg,
+    #00000066 0%,
+    #000000BF 100%
+  );
+
+  --inicio-titulo: var(--cor-branco);
+  --inicio-subtitulo: #FFFFFFE6;
+  --inicio-badge-fundo: var(--branco-fraco);
+  --inicio-badge-borda: var(--branco-medio);
+  --inicio-destaque: var(--cor-amarelo);
+  --inicio-destaque-gradiente: var(--gradiente-primario);
+
+  /* ================= CARDAPIO ================= */
+  --cardapio-fundo: var(--cor-creme);
+  --cardapio-card-fundo: var(--cor-branco);
+  --cardapio-card-borda: var(--cor-borda);
+  --cardapio-card-sombra: var(--sombra-padrao);
+  --cardapio-card-sombra-hover: var(--sombra-hover);
+  --cardapio-preco: var(--cor-laranja);
+  --cardapio-tag-fundo: #FEF9F1F2;
+  --cardapio-popular-fundo: var(--gradiente-primario);
+
+  /* ================= DIFERENCIAIS ================= */
+  --diferenciais-fundo: var(--gradiente-diferenciais);
+  --diferenciais-texto: var(--cor-texto);
+  --diferenciais-texto-suave: var(--cor-texto-suave);
+  --diferenciais-card-fundo: var(--cor-branco);
+  --diferenciais-card-borda: var(--cor-borda);
+  --diferenciais-icone: var(--cor-laranja);
+
+  /* ================= DEPOIMENTOS ================= */
+  --depoimentos-fundo: var(--cor-creme);
+  --depoimentos-card-fundo: var(--cor-branco);
+  --depoimentos-card-borda: var(--cor-borda);
+  --depoimentos-card-sombra: var(--sombra-padrao);
+  --depoimentos-estrelas: var(--cor-amarelo);
+  --depoimentos-texto: var(--cor-texto);
+  --depoimentos-meta: var(--cor-texto-suave);
+  --depoimentos-dot-ativo: var(--cor-laranja);
+  --depoimentos-dot-inativo: var(--cor-borda);
+
+  /* ================= SOBRE ================= */
+  --sobre-fundo: #F2EADD66;
+  --sobre-texto: var(--cor-texto);
+  --sobre-texto-suave: var(--cor-texto-suave);
+  --sobre-card-fundo: var(--cor-branco);
+  --sobre-card-borda: var(--cor-borda);
+  --sobre-stat-numero: var(--cor-laranja);
+  --sobre-imagem-glow: var(--gradiente-primario);
+
+  /* ================= CONTATO ================= */
+  --contato-fundo: var(--cor-creme);
+  --contato-texto: var(--cor-texto);
+  --contato-texto-suave: var(--cor-texto-suave);
+  --contato-card-fundo: var(--cor-branco);
+  --contato-card-borda: var(--cor-borda);
+  --contato-icone: var(--cor-laranja);
+  --contato-whatsapp: var(--cor-whatsapp);
+  --contato-input-fundo: var(--cor-branco);
+  --contato-input-borda: #E9DCCD;
+
+  /* ================= FOOTER ================= */
+  --footer-fundo: var(--cor-texto);
+  --footer-texto: var(--cor-creme);
+  --footer-texto-suave: #FEF9F199;
+  --footer-borda: var(--branco-fraco);
+  --footer-link-hover: var(--cor-amarelo);
+
+  /* ================= NAVBAR ================= */
+  --navbar-fundo-scroll: #FEF9F1D9;
+  --navbar-borda: var(--cor-borda);
+  --navbar-link: var(--cor-texto);
+  --navbar-link-hover: var(--cor-laranja);
+}
+
+.dark {
+  /* ================= CORES BASE ================= */
+  --cor-branco: #FEF8ED;
+  --cor-fundo: #110604;
+  --cor-card: #22110D;
+  --cor-texto: #FEF8ED;
+  --cor-texto-suave: #D0C2AF;
+  --cor-borda: #FFFFFF24;
+
+  /* ================= CORES DE DESTAQUE ================= */
+  --cor-amarelo: #FFCE43;
+  --cor-laranja: #FF932A;
+  --cor-vermelho: #FF5549;
+  --cor-whatsapp: #4BCB71;
+
+  /* ================= GRADIENTES ================= */
+  --gradiente-primario: linear-gradient(
+    135deg,
+    #FFCE43 0%,
+    #FF932A 50%,
+    #FF5549 100%
+  );
+
+  --gradiente-diferenciais: linear-gradient(
+    180deg,
+    #1D0C08 0%,
+    #2D1205 100%
+  );
+
+  /* ================= SOMBRAS ================= */
+  --sombra-padrao: #00000026;
+  --sombra-hover: #FF932A59;
+
+  /* ================= TRANSPARÊNCIAS ================= */
+  --branco-fraco: #FFFFFF1A;
+  --branco-medio: #FFFFFF33;
+
+  /* ================= HERO ================= */
+  --inicio-fundo-overlay: linear-gradient(
+    180deg,
+    #00000066 0%,
+    #000000BF 100%
+  );
+
+  --inicio-titulo: #FFFFFF;
+  --inicio-subtitulo: #FFFFFFE6;
+  --inicio-badge-fundo: var(--branco-fraco);
+  --inicio-badge-borda: var(--branco-medio);
+  --inicio-destaque: var(--cor-amarelo);
+  --inicio-destaque-gradiente: var(--gradiente-primario);
+
+  /* ================= CARDAPIO ================= */
+  --cardapio-fundo: var(--cor-fundo);
+  --cardapio-card-fundo: var(--cor-card);
+  --cardapio-card-borda: var(--cor-borda);
+  --cardapio-card-sombra: var(--sombra-padrao);
+  --cardapio-card-sombra-hover: var(--sombra-hover);
+  --cardapio-preco: var(--cor-laranja);
+  --cardapio-tag-fundo: #110604F2;
+  --cardapio-popular-fundo: var(--gradiente-primario);
+
+  /* ================= DIFERENCIAIS ================= */
+  --diferenciais-fundo: var(--gradiente-diferenciais);
+  --diferenciais-texto: var(--cor-texto);
+  --diferenciais-texto-suave: var(--cor-texto-suave);
+  --diferenciais-card-fundo: var(--cor-card);
+  --diferenciais-card-borda: var(--cor-borda);
+  --diferenciais-icone: var(--cor-laranja);
+
+  /* ================= DEPOIMENTOS ================= */
+  --depoimentos-fundo: var(--cor-fundo);
+  --depoimentos-card-fundo: var(--cor-card);
+  --depoimentos-card-borda: var(--cor-borda);
+  --depoimentos-card-sombra: var(--sombra-padrao);
+  --depoimentos-estrelas: var(--cor-amarelo);
+  --depoimentos-texto: var(--cor-texto);
+  --depoimentos-meta: var(--cor-texto-suave);
+  --depoimentos-dot-ativo: var(--cor-laranja);
+  --depoimentos-dot-inativo: var(--cor-borda);
+
+  /* ================= SOBRE ================= */
+  --sobre-fundo: #2C1A1566;
+  --sobre-texto: var(--cor-texto);
+  --sobre-texto-suave: var(--cor-texto-suave);
+  --sobre-card-fundo: var(--cor-card);
+  --sobre-card-borda: var(--cor-borda);
+  --sobre-stat-numero: var(--cor-laranja);
+  --sobre-imagem-glow: var(--gradiente-primario);
+
+  /* ================= CONTATO ================= */
+  --contato-fundo: var(--cor-fundo);
+  --contato-texto: var(--cor-texto);
+  --contato-texto-suave: var(--cor-texto-suave);
+  --contato-card-fundo: var(--cor-card);
+  --contato-card-borda: var(--cor-borda);
+  --contato-icone: var(--cor-laranja);
+  --contato-whatsapp: var(--cor-whatsapp);
+  --contato-input-fundo: var(--cor-card);
+  --contato-input-borda: #FFFFFF2E;
+
+  /* ================= FOOTER ================= */
+  --footer-fundo: #080201;
+  --footer-texto: var(--cor-texto);
+  --footer-texto-suave: #FEF8ED99;
+  --footer-borda: var(--branco-fraco);
+  --footer-link-hover: var(--cor-amarelo);
+
+  /* ================= NAVBAR ================= */
+  --navbar-fundo-scroll: #110604D9;
+  --navbar-borda: var(--cor-borda);
+  --navbar-link: var(--cor-texto);
+  --navbar-link-hover: var(--cor-laranja);
+}
