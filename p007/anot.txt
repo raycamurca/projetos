@@ -1,6 +1,6 @@
 <div class="card-tarefa pendente">
     <div class="tarefa">
-        <div class="card-icon-concluido">
+        <div class="card-icon">
             <i class="fa-regular fa-circle"></i>
         </div>
         <p class = "descricao">
