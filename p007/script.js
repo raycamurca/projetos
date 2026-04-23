@@ -45,7 +45,9 @@ btAddTarefa.addEventListener("click", ()=>{
         return spanErro.innerHTML = `${iconErro} A tarefa já existe`
     }
 
-    addTarefa(inputValue);
+    criarTarefa(inputValue)
+    addTarefa();
+    deletarTarefa();
 })
 
 // Função criar tarefa
@@ -63,7 +65,7 @@ const criarTarefa = (value) => {
     divTarefa.appendChild(divCardIcon);
 
     const iCirculo = document.createElement("i");
-    iCirculo.setAttribute("class", "fa-regular fa-circle");
+    iCirculo.setAttribute("class", "fa-regular fa-circle circulo");
     divCardIcon.appendChild(iCirculo);
 
     const pDescricao = document.createElement("p");
@@ -79,39 +81,48 @@ const criarTarefa = (value) => {
     iLixeira.setAttribute("class", "fa-regular fa-trash-can");
     divCardTarefa.appendChild(iLixeira);
 
-    return divCardTarefa;
+    return displayTodas.appendChild(divCardTarefa);
 }
 
-// add tarefa
+// Função adicionar tarefa
+
+const msgPadraoVaziaTodas = document.querySelector(".conteudo-todos");
+const displayTodas = document.querySelector("#todas");
+const msgPadraoVaziaPendentes = document.querySelector(".conteudo-pendentes");
+const displayPendentes = document.querySelector("#pendentes");
+const msgPadraoVaziaConcluidas = document.querySelector(".conteudo-concluido");
+const displayConcluidas = document.querySelector("#concluidas");
 
 const addTarefa = (value) => {
+
     const novaTarefa = criarTarefa(value);
 
-    const msgPadraoVaziaTodas = document.querySelector(".conteudo-todos");
-    const displayTodas = document.querySelector("#todas");
-    if(novaTarefa.classList.contains("card-tarefa")){
-        msgPadraoVaziaTodas.style.display = "none";
-        displayTodas.appendChild(novaTarefa);
-    }
+    const todasTarefas = document.querySelectorAll(".card-tarefa");
 
-    const msgPadraoVaziaPendentes = document.querySelector(".conteudo-pendentes");
-    const displayPendentes = document.querySelector("#pendentes");
-    if(novaTarefa.classList.contains("pendente")){
-        msgPadraoVaziaPendentes.style.display = "none";
-        displayPendentes.appendChild(novaTarefa.cloneNode(true));
-    }
+    todasTarefas.forEach(tarefa =>{
+        tarefa.appendChild(displayTodas)
+    })
 
-    const msgPadraoVaziaConcluidas = document.querySelector(".conteudo-concluido");
-    const displayConcluidas = document.querySelector("#concluidas");
-    if(novaTarefa.classList.contains("concluido")){
-        msgPadraoVaziaConcluidas.style.display = "none";
-        displayConcluidas.appendChild(novaTarefa.cloneNode(true))
-    }
+    // if(novaTarefa.classList.contains("card-tarefa")){
+    //     msgPadraoVaziaTodas.style.display = "none";
+    //     displayTodas.appendChild(novaTarefa);
+    // }
+    
+    // if(novaTarefa.classList.contains("pendente")){
+    //     msgPadraoVaziaPendentes.style.display = "none";
+    //     displayPendentes.appendChild(novaTarefa.cloneNode(true));
+    // }
 
-    deletarTarefa();
+    // if(novaTarefa.classList.contains("concluida")){
+    //     msgPadraoVaziaConcluidas.style.display = "none";
+    //     displayConcluidas.appendChild(novaTarefa.cloneNode(true))
+    // }
+
+    teste();
+    
 }
 
-// Função deletar 
+// Função deletar Tarefa
 
 const deletarTarefa = () =>{
     const iconsDelete = document.querySelectorAll(".fa-trash-can");
@@ -127,6 +138,49 @@ const deletarTarefa = () =>{
                     cardRemoveIgual.remove();
                 }
             });
+            verificarMsg();        
+        })
+    })
+}
+
+// Função msg Padrão
+
+const verificarMsg = () =>{
+    const cardsTarefas = document.querySelectorAll(".card-tarefa");
+    if(cardsTarefas.length === 0){
+        msgPadraoVaziaTodas.style.display = "flex";
+    }
+
+    const cardsPendentes = document.querySelectorAll(".pendente");
+    if(cardsPendentes.length === 0){
+        msgPadraoVaziaPendentes.style.display = "flex";
+    }
+
+    const cardsConcluidas = document.querySelectorAll(".concluida");
+    if(cardsConcluidas.length === 0){
+        msgPadraoVaziaConcluidas.style.display = "flex";
+    }
+}
+
+const teste = () => {
+    const iconsCircle = document.querySelectorAll(".circulo");
+    
+    iconsCircle.forEach(icon =>{
+        icon.addEventListener("click", ()=>{
+            const cardPaiIcon = icon.closest(".card-tarefa");
+            if(icon.classList.contains("fa-circle")){
+                icon.classList.remove("fa-circle");
+                icon.classList.add("fa-circle-check");
+                icon.classList.add("marcado");
+                cardPaiIcon.classList.remove("pendente");
+                cardPaiIcon.classList.add("concluida");
+            }else{
+                icon.classList.remove("fa-circle-check");
+                icon.classList.add("fa-circle");
+                icon.classList.remove("marcado");
+                cardPaiIcon.classList.remove("concluida");
+                cardPaiIcon.classList.add("pendente");
+            }
         })
     })
 }

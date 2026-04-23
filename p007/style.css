@@ -10,17 +10,13 @@
 
 :root {
   --fundo-principal: #1A1D21;
-  --texto-principal: #E8E6E3;
   --preto: #000000;
   --fundo-cartao: #23262B;
   --cor-primaria: #A8C9EC;
-  --sombra: #a8c9ec50;
   --texto-cinza: #9A9895;
-  --cor-destaque: #6BA88E;
   --branco: #ffffff;
-  --cor-sucesso: #7BC096;
-  --texto-sobre-sucesso: #E0F0E8;
-  --cor-erro: #D98A80;
+  --cor-sucesso: #2ECC71;
+  --cor-erro: #D98A80; 
   --borda: #8080804c;
   --font: "Poppins", sans-serif;
 }
@@ -158,6 +154,25 @@ body {
   align-items: center;
 }
 
+.card-icon {
+  border-radius: 50%;
+  height: 25px;
+  width: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.marcado {
+  background-color: var(--cor-sucesso);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+}
+
 .conteudo-pendentes {
   display: flex;
   flex-direction: column;
@@ -203,7 +218,7 @@ body {
 }
 
 .icon-conteudo {
-  background-color: var(--cor-destaque);
+  background-color: var(--cor-sucesso);
   width: 50px;
   height: 50px;
   display: flex;
@@ -236,9 +251,6 @@ body {
   color: #ff4d4d;
 }
 
-.verde {
-  color: var(--cor-sucesso);
-}
 
 @media screen and (min-width: 651px) {
   .bt-add-tarefa {
