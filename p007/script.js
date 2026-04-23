@@ -29,13 +29,23 @@ const btAddTarefa = document.querySelector(".bt-add-tarefa");
 const input = document.querySelector("#itarefa");
 
 btAddTarefa.addEventListener("click", ()=>{
+    spanErro.innerHTML = "";
     const inputValue = input.value.trim();
     if(inputValue === ""){
         return spanErro.innerHTML = `${iconErro} Nome da tarefa obrigatório`
     };
 
-    tarefaTodas(inputValue);
-    tarefaPendentes(inputValue);
+    const tarefas = [...document.querySelectorAll(".descricao")];
+
+    const tarefaExiste = tarefas.some(tarefa => {
+        return tarefa.innerHTML === inputValue;
+    })
+
+    if(tarefaExiste){
+        return spanErro.innerHTML = `${iconErro} A tarefa já existe`
+    }
+
+    addTarefa(inputValue);
 })
 
 // Função criar tarefa
@@ -74,24 +84,49 @@ const criarTarefa = (value) => {
 
 // add tarefa
 
-const tarefaTodas = (value) => {
+const addTarefa = (value) => {
     const novaTarefa = criarTarefa(value);
 
-    const displayTodas = document.querySelector("#todas");
     const msgPadraoVaziaTodas = document.querySelector(".conteudo-todos");
+    const displayTodas = document.querySelector("#todas");
     if(novaTarefa.classList.contains("card-tarefa")){
         msgPadraoVaziaTodas.style.display = "none";
         displayTodas.appendChild(novaTarefa);
     }
-}
 
-const tarefaPendentes = (value) => {
-    const novaTarefa = criarTarefa(value);
-
-    const displayPendentes = document.querySelector("#pendentes");
     const msgPadraoVaziaPendentes = document.querySelector(".conteudo-pendentes");
+    const displayPendentes = document.querySelector("#pendentes");
     if(novaTarefa.classList.contains("pendente")){
         msgPadraoVaziaPendentes.style.display = "none";
-        displayPendentes.appendChild(novaTarefa);
+        displayPendentes.appendChild(novaTarefa.cloneNode(true));
     }
+
+    const msgPadraoVaziaConcluidas = document.querySelector(".conteudo-concluido");
+    const displayConcluidas = document.querySelector("#concluidas");
+    if(novaTarefa.classList.contains("concluido")){
+        msgPadraoVaziaConcluidas.style.display = "none";
+        displayConcluidas.appendChild(novaTarefa.cloneNode(true))
+    }
+
+    deletarTarefa();
+}
+
+// Função deletar 
+
+const deletarTarefa = () =>{
+    const iconsDelete = document.querySelectorAll(".fa-trash-can");
+    iconsDelete.forEach(icon => {
+        icon.addEventListener("click", ()=>{
+            const cardRemoveAtual = icon.closest(".card-tarefa");
+            const descricaoAtual = cardRemoveAtual.childNodes[0].lastChild;
+            const descricoes = document.querySelectorAll(".descricao");
+            descricoes.forEach(el => {
+                if(el.innerHTML === descricaoAtual.innerHTML){
+                    const cardRemoveIgual = el.closest(".card-tarefa");
+                    cardRemoveAtual.remove();
+                    cardRemoveIgual.remove();
+                }
+            });
+        })
+    })
 }
