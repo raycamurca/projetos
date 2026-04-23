@@ -45,9 +45,11 @@ btAddTarefa.addEventListener("click", ()=>{
         return spanErro.innerHTML = `${iconErro} A tarefa já existe`
     }
 
-    criarTarefa(inputValue)
-    addTarefa();
+    const novaTarefa = criarTarefa(inputValue);
+    addTarefa(novaTarefa);
     deletarTarefa();
+    
+    // addTarefa(inputValue);
 })
 
 // Função criar tarefa
@@ -81,7 +83,7 @@ const criarTarefa = (value) => {
     iLixeira.setAttribute("class", "fa-regular fa-trash-can");
     divCardTarefa.appendChild(iLixeira);
 
-    return displayTodas.appendChild(divCardTarefa);
+    return divCardTarefa
 }
 
 // Função adicionar tarefa
@@ -94,32 +96,10 @@ const msgPadraoVaziaConcluidas = document.querySelector(".conteudo-concluido");
 const displayConcluidas = document.querySelector("#concluidas");
 
 const addTarefa = (value) => {
-
-    const novaTarefa = criarTarefa(value);
-
-    const todasTarefas = document.querySelectorAll(".card-tarefa");
-
-    todasTarefas.forEach(tarefa =>{
-        tarefa.appendChild(displayTodas)
-    })
-
-    // if(novaTarefa.classList.contains("card-tarefa")){
-    //     msgPadraoVaziaTodas.style.display = "none";
-    //     displayTodas.appendChild(novaTarefa);
-    // }
-    
-    // if(novaTarefa.classList.contains("pendente")){
-    //     msgPadraoVaziaPendentes.style.display = "none";
-    //     displayPendentes.appendChild(novaTarefa.cloneNode(true));
-    // }
-
-    // if(novaTarefa.classList.contains("concluida")){
-    //     msgPadraoVaziaConcluidas.style.display = "none";
-    //     displayConcluidas.appendChild(novaTarefa.cloneNode(true))
-    // }
-
-    teste();
-    
+    msgPadraoVaziaTodas.style.display = "none";
+    displayTodas.appendChild(value);
+    msgPadraoVaziaPendentes.style.display = "none";
+    displayPendentes.appendChild(value.cloneNode(true));
 }
 
 // Função deletar Tarefa
@@ -138,49 +118,28 @@ const deletarTarefa = () =>{
                     cardRemoveIgual.remove();
                 }
             });
-            verificarMsg();        
+            verificarMsg();      
         })
     })
 }
 
 // Função msg Padrão
 
+const cardsTarefas = document.querySelectorAll(".card-tarefa");
+const cardsPendentes = document.querySelectorAll(".pendente");
+const cardsConcluidas = document.querySelectorAll(".concluida");
+
 const verificarMsg = () =>{
-    const cardsTarefas = document.querySelectorAll(".card-tarefa");
+    
     if(cardsTarefas.length === 0){
         msgPadraoVaziaTodas.style.display = "flex";
     }
 
-    const cardsPendentes = document.querySelectorAll(".pendente");
     if(cardsPendentes.length === 0){
         msgPadraoVaziaPendentes.style.display = "flex";
     }
 
-    const cardsConcluidas = document.querySelectorAll(".concluida");
     if(cardsConcluidas.length === 0){
         msgPadraoVaziaConcluidas.style.display = "flex";
     }
-}
-
-const teste = () => {
-    const iconsCircle = document.querySelectorAll(".circulo");
-    
-    iconsCircle.forEach(icon =>{
-        icon.addEventListener("click", ()=>{
-            const cardPaiIcon = icon.closest(".card-tarefa");
-            if(icon.classList.contains("fa-circle")){
-                icon.classList.remove("fa-circle");
-                icon.classList.add("fa-circle-check");
-                icon.classList.add("marcado");
-                cardPaiIcon.classList.remove("pendente");
-                cardPaiIcon.classList.add("concluida");
-            }else{
-                icon.classList.remove("fa-circle-check");
-                icon.classList.add("fa-circle");
-                icon.classList.remove("marcado");
-                cardPaiIcon.classList.remove("concluida");
-                cardPaiIcon.classList.add("pendente");
-            }
-        })
-    })
 }
