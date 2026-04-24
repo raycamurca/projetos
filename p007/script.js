@@ -47,6 +47,7 @@ btAddTarefa.addEventListener("click", ()=>{
 
     const novaTarefa = criarTarefa(inputValue);
     addTarefa(novaTarefa);
+    tarefaConcluida()
     deletarTarefa();
     
     // addTarefa(inputValue);
@@ -92,14 +93,13 @@ const msgPadraoVaziaTodas = document.querySelector(".conteudo-todos");
 const displayTodas = document.querySelector("#todas");
 const msgPadraoVaziaPendentes = document.querySelector(".conteudo-pendentes");
 const displayPendentes = document.querySelector("#pendentes");
-const msgPadraoVaziaConcluidas = document.querySelector(".conteudo-concluido");
-const displayConcluidas = document.querySelector("#concluidas");
 
 const addTarefa = (value) => {
     msgPadraoVaziaTodas.style.display = "none";
     displayTodas.appendChild(value);
     msgPadraoVaziaPendentes.style.display = "none";
     displayPendentes.appendChild(value.cloneNode(true));
+    totalPendentesConcluidas();
 }
 
 // Função deletar Tarefa
@@ -124,12 +124,12 @@ const deletarTarefa = () =>{
 }
 
 // Função msg Padrão
-
-const cardsTarefas = document.querySelectorAll(".card-tarefa");
-const cardsPendentes = document.querySelectorAll(".pendente");
-const cardsConcluidas = document.querySelectorAll(".concluida");
+const msgPadraoVaziaConcluidas = document.querySelector(".conteudo-concluido");
 
 const verificarMsg = () =>{
+    const cardsTarefas = document.querySelectorAll(".card-tarefa");
+    const cardsPendentes = document.querySelectorAll(".pendente");
+    const cardsConcluidas = document.querySelectorAll(".concluida");
     
     if(cardsTarefas.length === 0){
         msgPadraoVaziaTodas.style.display = "flex";
@@ -142,4 +142,11 @@ const verificarMsg = () =>{
     if(cardsConcluidas.length === 0){
         msgPadraoVaziaConcluidas.style.display = "flex";
     }
+}
+
+const totalPendentesConcluidas = () => {
+    const tarefasPendentes = document.querySelectorAll(".pendente");
+    const tarefasConcluidas = document.querySelectorAll(".concluida");
+    const info = document.querySelector(".title-info p");
+    info.innerHTML = `${tarefasPendentes.length/2} pendentes · ${tarefasConcluidas.length/2} concluídas`
 }
