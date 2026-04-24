@@ -47,7 +47,6 @@ btAddTarefa.addEventListener("click", ()=>{
 
     const novaTarefa = criarTarefa(inputValue);
     addTarefa(novaTarefa);
-    tarefaConcluida()
     deletarTarefa();
     
     // addTarefa(inputValue);
