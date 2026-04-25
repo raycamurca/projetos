@@ -1,212 +1,148 @@
-# Passo a passo do `script.js` (somente filtros **Todas** e **Pendentes**)
-
-## 1) Estruture o estado da aplicacao
-
-Crie um objeto `estado` com:
-
-- `tarefas`: array de objetos
-- `abaAtiva`: `"todas"` ou `"pendentes"`
-
-Modelo de tarefa:
-
-- `id`: identificador unico
-- `texto`: descricao da tarefa
-- `concluida`: `true` ou `false`
-
-Exemplo:
-
-```js
-const estado = {
-  tarefas: [],
-  abaAtiva: "todas",
-};
-```
-
-## 2) Separe todos os seletores no topo
-
-No inicio do arquivo, pegue os elementos que serao usados:
-
-- input de tarefa
-- botao adicionar
-- span de erro
-- paragrafo de resumo do topo
-- botoes da area de filtros
-- containers das abas (`#todas` e `#pendentes`)
-- mensagens padrao (lista vazia e tudo em dia)
-
-## 3) Crie funcoes utilitarias pequenas
-
-### `gerarId()`
-
-Gera um identificador unico para cada tarefa.
-
-- primeiro tenta `crypto.randomUUID()`
-- se nao existir, usa fallback com data + numero aleatorio
-
-### `normalizarTexto(texto)`
-
-Padroniza o texto para comparar duplicidade.
-
-- aplica `trim()`
-- aplica `toLowerCase()`
-
-## 4) Controle de abas
-
-### `mudarAba(idAba)`
-
-Responsavel por alternar visualmente entre filtros e guardar a aba atual no estado.
-
-O que faz:
-
-- atualiza `estado.abaAtiva`
-- adiciona/remove classe `ativo` nos botoes
-- adiciona/remove classe `show` nas secoes `.conteudo`
-
-## 5) Criacao do card de tarefa
-
-### `criarCardTarefa(tarefa)`
-
-Monta e retorna o elemento `.card-tarefa` para uma tarefa.
-
-O que monta:
-
-- icone de status
-- descricao
-- icone de lixeira
-
-Boas praticas:
-
-- usar `textContent` para descricao
-- adicionar `data-id` no card
-- usar `data-action="alternar"` no icone de status
-- usar `data-action="excluir"` no icone de lixeira
-
-Se `tarefa.concluida === true`, aplicar visual de concluida (icone marcado e texto riscado).
-
-## 6) Renderizacao principal
-
-### `renderizar()`
-
-Funcao central da tela. Sempre que o estado muda, esta funcao redesenha a lista.
-
-Fluxo:
-
-1. limpar cards atuais de `#todas` e `#pendentes`
-2. percorrer `estado.tarefas`
-3. sempre adicionar card em `#todas`
-4. adicionar em `#pendentes` somente se `concluida === false`
-5. chamar `atualizarResumoTopo()`
-6. chamar `atualizarMensagensVazias()`
-
-## 7) Resumo do topo
-
-### `atualizarResumoTopo()`
-
-Atualiza o texto abaixo de "Minhas tarefas" com contagem real.
-
-Exemplo:
-
-`"2 pendentes · 1 concluidas"`
-
-## 8) Mensagens padrao
-
-### `atualizarMensagensVazias()`
-
-Mostra/esconde as mensagens de estado vazio:
-
-- em `#todas`: mostrar quando `estado.tarefas.length === 0`
-- em `#pendentes`: mostrar quando nao houver tarefas pendentes
-
-## 9) Adicionar tarefa
-
-### `adicionarTarefa()`
-
-Executada no clique do botao `+` e no Enter do input.
-
-Fluxo:
-
-1. limpa erro antigo
-2. valida campo vazio
-3. valida duplicidade com `normalizarTexto()`
-4. adiciona no `estado.tarefas` com `{ id, texto, concluida: false }`
-5. limpa input
-6. foca input
-7. chama `renderizar()`
-
-## 10) Remover tarefa
-
-### `removerTarefa(idTarefa)`
-
-Remove uma tarefa pelo `id` e redesenha a tela.
-
-- usa `filter`
-- chama `renderizar()`
-
-## 11) Marcar/desmarcar concluida
-
-### `alternarConclusao(idTarefa)`
-
-Inverte o valor `concluida` da tarefa selecionada e redesenha a tela.
-
-- usa `map`
-- chama `renderizar()`
-
-## 12) Tratar cliques da lista com delegacao de eventos
-
-### `tratarCliqueLista(evento)`
-
-Evita criar listener em cada card novo.
-
-O que faz:
-
-- identifica o elemento com `data-action`
-- pega o `id` da tarefa no card pai
-- se acao for `"excluir"`, chama `removerTarefa(idTarefa)`
-- se acao for `"alternar"`, chama `alternarConclusao(idTarefa)`
-
-Registrar essa funcao nos containers `#todas` e `#pendentes`.
-
-## 13) (Opcional) Edicao por duplo clique
-
-### `tratarDuploClique(evento)`
-
-Permite editar descricao ao dar duplo clique no texto da tarefa.
-
-Fluxo:
-
-- encontra `.descricao`
-- abre `prompt`
-- valida vazio/duplicidade
-- atualiza no estado
-- chama `renderizar()`
-
-## 14) Inicializacao no fim do arquivo
-
-No final do `script.js`, execute:
-
-1. `mudarAba(estado.abaAtiva)`
-2. `renderizar()`
-
-Assim a tela sempre inicia consistente.
-
----
-
-## Ordem recomendada de implementacao
-
-1. seletores + `estado`
-2. utilitarias (`gerarId`, `normalizarTexto`)
-3. `mudarAba`
-4. `criarCardTarefa`
-5. `renderizar`
-6. `atualizarResumoTopo` e `atualizarMensagensVazias`
-7. `adicionarTarefa`
-8. `removerTarefa` e `alternarConclusao`
-9. `tratarCliqueLista` + listeners (click, enter, filtros)
-10. inicializacao final
-
-## Erros para evitar
-
-- nao usar `cloneNode` para simular filtros
-- nao comparar tarefas com `innerHTML`
-- nao dividir contagem por 2
-- nao recriar listeners a cada render
+# Passo a passo da logica JavaScript (`script.js`)
+
+Este documento cobre somente a logica da lista de tarefas.
+
+Fluxo da aplicacao:
+- adicionar tarefa
+- marcar/desmarcar como concluida
+- deletar tarefa
+- filtrar em 3 abas (`todas`, `pendentes`, `concluidas`)
+
+Regra principal:
+- toda tarefa sempre pertence a aba `todas`
+- `pendentes` mostra apenas `concluida === false`
+- `concluidas` mostra apenas `concluida === true`
+
+## Checklist de implementacao
+
+### 1) Estruturar estado da aplicacao
+- [ ] **Objetivo tecnico:** centralizar os dados da tela em um unico estado.
+- [ ] **O que fazer na logica:**
+  - criar `estado` com `tarefas: []` e `abaAtiva: "todas"`
+  - definir modelo da tarefa: `id`, `texto`, `concluida`
+- [ ] **Resultado esperado:** toda mudanca da interface depende apenas de `estado`.
+
+### 2) Mapear seletores do DOM
+- [ ] **Objetivo tecnico:** evitar consultas repetidas ao DOM.
+- [ ] **O que fazer na logica:**
+  - selecionar input, botao adicionar e span de erro
+  - selecionar botoes de abas (`data-aba`)
+  - selecionar containers `#todas`, `#pendentes`, `#concluidas`
+  - selecionar texto de resumo do topo
+- [ ] **Resultado esperado:** os seletores ficam organizados no topo do arquivo.
+
+### 3) Criar utilitarias
+- [ ] **Objetivo tecnico:** reaproveitar regras comuns.
+- [ ] **O que fazer na logica:**
+  - criar `gerarId()` com `crypto.randomUUID()` e fallback
+  - criar `normalizarTexto(texto)` com `trim()` e `toLowerCase()`
+- [ ] **Resultado esperado:** ids unicos e comparacao de texto padronizada.
+
+### 4) Implementar troca de abas
+- [ ] **Objetivo tecnico:** controlar visual e estado da aba ativa.
+- [ ] **O que fazer na logica:**
+  - criar `mudarAba(idAba)`
+  - atualizar `estado.abaAtiva`
+  - alternar classe `ativo` nos botoes
+  - alternar classe `show` nos conteudos
+- [ ] **Resultado esperado:** apenas a aba selecionada fica visivel.
+
+### 5) Criar card de tarefa
+- [ ] **Objetivo tecnico:** padronizar a criacao dos cards.
+- [ ] **O que fazer na logica:**
+  - criar `criarCardTarefa(tarefa)`
+  - montar card com descricao, acao de alternar e acao de excluir
+  - adicionar `data-id` no card
+  - usar `data-action="alternar"` e `data-action="excluir"`
+  - aplicar visual de concluida quando `tarefa.concluida` for `true`
+- [ ] **Resultado esperado:** cada tarefa vira um elemento pronto para interacao.
+
+### 6) Implementar renderizacao principal
+- [ ] **Objetivo tecnico:** redesenhar a tela sempre que o estado mudar.
+- [ ] **O que fazer na logica:**
+  - criar `renderizar()`
+  - limpar as listas antes de desenhar novamente
+  - percorrer `estado.tarefas` e distribuir:
+    - sempre em `todas`
+    - em `pendentes` se `concluida === false`
+    - em `concluidas` se `concluida === true`
+  - chamar `atualizarResumoTopo()`
+  - chamar `atualizarMensagensVazias()`
+- [ ] **Resultado esperado:** conteudo das abas sempre sincronizado com o estado.
+
+### 7) Atualizar resumo do topo
+- [ ] **Objetivo tecnico:** exibir contadores corretos.
+- [ ] **O que fazer na logica:**
+  - criar `atualizarResumoTopo()`
+  - calcular total pendente e total concluida
+  - atualizar texto do topo (ex.: `2 pendentes · 1 concluida`)
+- [ ] **Resultado esperado:** resumo reflete o estado atual apos qualquer acao.
+
+### 8) Atualizar mensagens de vazio
+- [ ] **Objetivo tecnico:** mostrar feedback quando nao houver itens.
+- [ ] **O que fazer na logica:**
+  - criar `atualizarMensagensVazias()`
+  - exibir mensagem de `todas` quando `estado.tarefas.length === 0`
+  - exibir mensagem de `pendentes` quando nao houver pendentes
+  - exibir mensagem de `concluidas` quando nao houver concluidas
+- [ ] **Resultado esperado:** cada aba mostra o estado vazio correto.
+
+### 9) Adicionar tarefa
+- [ ] **Objetivo tecnico:** incluir novas tarefas com validacao.
+- [ ] **O que fazer na logica:**
+  - criar `adicionarTarefa()`
+  - validar campo vazio
+  - validar duplicidade com `normalizarTexto()`
+  - inserir em `estado.tarefas` com `concluida: false`
+  - limpar input, focar input e chamar `renderizar()`
+- [ ] **Resultado esperado:** nova tarefa aparece em `todas` e `pendentes`.
+
+### 10) Marcar/desmarcar tarefa como concluida
+- [ ] **Objetivo tecnico:** alterar estado da tarefa sem perder dados.
+- [ ] **O que fazer na logica:**
+  - criar `alternarConclusao(idTarefa)`
+  - inverter valor de `concluida` da tarefa alvo
+  - chamar `renderizar()`
+- [ ] **Resultado esperado:**
+  - ao concluir, sai de `pendentes` e entra em `concluidas`
+  - ao desmarcar, sai de `concluidas` e volta para `pendentes`
+
+### 11) Deletar tarefa
+- [ ] **Objetivo tecnico:** remover tarefa por id.
+- [ ] **O que fazer na logica:**
+  - criar `removerTarefa(idTarefa)`
+  - filtrar `estado.tarefas` removendo o id informado
+  - chamar `renderizar()`
+- [ ] **Resultado esperado:** tarefa removida de todas as abas.
+
+### 12) Implementar delegacao de eventos dos cards
+- [ ] **Objetivo tecnico:** manter eventos funcionando apos cada render.
+- [ ] **O que fazer na logica:**
+  - criar `tratarCliqueLista(evento)`
+  - localizar `data-action` clicado
+  - localizar `idTarefa` no card pai
+  - chamar `alternarConclusao()` ou `removerTarefa()`
+  - registrar listener nos containers `todas`, `pendentes` e `concluidas`
+- [ ] **Resultado esperado:** acoes dos cards funcionam sem criar listeners por item.
+
+### 13) Conectar eventos gerais
+- [ ] **Objetivo tecnico:** ligar a logica aos controles da tela.
+- [ ] **O que fazer na logica:**
+  - no clique do botao, chamar `adicionarTarefa()`
+  - no Enter do input, chamar `adicionarTarefa()`
+  - no clique das abas (`data-aba`), chamar `mudarAba(idAba)`
+- [ ] **Resultado esperado:** interface responde aos comandos principais.
+
+### 14) Inicializar aplicacao
+- [ ] **Objetivo tecnico:** iniciar interface consistente.
+- [ ] **O que fazer na logica:**
+  - executar `mudarAba(estado.abaAtiva)`
+  - executar `renderizar()`
+- [ ] **Resultado esperado:** app inicia na aba `todas` com estado sincronizado.
+
+## Regras finais da renderizacao
+
+- toda mudanca de estado deve terminar com `renderizar()`
+- `todas` sempre recebe todas as tarefas
+- `pendentes` recebe somente tarefas nao concluidas
+- `concluidas` recebe somente tarefas concluidas

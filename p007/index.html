@@ -30,12 +30,27 @@
         <span class="erro"></span>
 
         <div class="areas">
-            <button class="pendentes ativo" conteudo-id="pendentes">Pendentes</button>
-            <button class="concluidas" conteudo-id="concluidas">Concluídas</button>
+            <button class="todas ativo" data-aba="todas">Todas</button>
+            <button class="pendentes" data-aba="pendentes">Pendentes</button>
+            <button class="concluidas" data-aba="concluidas">Concluídas</button>
         </div>
 
         <div class="conteudos">
-            <div class="conteudo show" id="pendentes">
+            <div class="conteudo show" id="todas">
+                <div class="conteudo-todas">
+                    <div class="icon-conteudo">
+                        <i class="fa-solid fa-check"></i>
+                    </div>
+                    <div class="info-one">
+                        <h2>Nenhuma tarefa ainda</h2>
+                    </div>
+                    <div class="info-two">
+                        <p>Adicione uma tarefa para comecar.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="conteudo" id="pendentes">
                 <div class="conteudo-pendentes">
                     <div class="icon-conteudo">
                         <i class="fa-solid fa-check"></i>
