@@ -2,7 +2,7 @@
   <div class="tarefa">
     <button class="card-icon" data-action="alternar">  
       <i aria-hidden="true"></i>
-      "fa-regular fa-circle-check" true
+      "fa-regular fa-circle-check marcado" true
       "fa-regular fa-circle"; false
     </button> 
     // aria-label="Marcar tarefa como concluída / Marcar tarefa como pendente" aria-checked="false/true"

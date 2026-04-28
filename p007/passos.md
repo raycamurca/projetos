@@ -16,36 +16,36 @@ Regra principal:
 ## Checklist de implementacao
 
 ### 1) Estruturar estado da aplicacao
-- [ ] **Objetivo tecnico:** centralizar os dados da tela em um unico estado.
-- [ ] **O que fazer na logica:**
+- [X] **Objetivo tecnico:** centralizar os dados da tela em um unico estado.
+- [X] **O que fazer na logica:**
   - criar `estado` com `tarefas: []` e `abaAtiva: "todas"`
   - definir modelo da tarefa: `id`, `texto`, `concluida`
-- [ ] **Resultado esperado:** toda mudanca da interface depende apenas de `estado`.
+- [X] **Resultado esperado:** toda mudanca da interface depende apenas de `estado`.
 
 ### 2) Mapear seletores do DOM
-- [ ] **Objetivo tecnico:** evitar consultas repetidas ao DOM.
-- [ ] **O que fazer na logica:**
+- [X] **Objetivo tecnico:** evitar consultas repetidas ao DOM.
+- [X] **O que fazer na logica:**
   - selecionar input, botao adicionar e span de erro
   - selecionar botoes de abas (`data-aba`)
   - selecionar containers `#todas`, `#pendentes`, `#concluidas`
   - selecionar texto de resumo do topo
-- [ ] **Resultado esperado:** os seletores ficam organizados no topo do arquivo.
+- [X] **Resultado esperado:** os seletores ficam organizados no topo do arquivo.
 
 ### 3) Criar utilitarias
-- [ ] **Objetivo tecnico:** reaproveitar regras comuns.
-- [ ] **O que fazer na logica:**
+- [X] **Objetivo tecnico:** reaproveitar regras comuns.
+- [X] **O que fazer na logica:**
   - criar `gerarId()` com `crypto.randomUUID()` e fallback
   - criar `normalizarTexto(texto)` com `trim()` e `toLowerCase()`
-- [ ] **Resultado esperado:** ids unicos e comparacao de texto padronizada.
+- [X] **Resultado esperado:** ids unicos e comparacao de texto padronizada.
 
 ### 4) Implementar troca de abas
-- [ ] **Objetivo tecnico:** controlar visual e estado da aba ativa.
-- [ ] **O que fazer na logica:**
+- [X] **Objetivo tecnico:** controlar visual e estado da aba ativa.
+- [X] **O que fazer na logica:**
   - criar `mudarAba(idAba)`
   - atualizar `estado.abaAtiva`
   - alternar classe `ativo` nos botoes
   - alternar classe `show` nos conteudos
-- [ ] **Resultado esperado:** apenas a aba selecionada fica visivel.
+- [X] **Resultado esperado:** apenas a aba selecionada fica visivel.
 
 ### 5) Criar card de tarefa
 - [ ] **Objetivo tecnico:** padronizar a criacao dos cards.
