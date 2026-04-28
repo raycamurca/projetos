@@ -1,13 +1,16 @@
-<div class="card-tarefa pendente">
-    <div class="tarefa">
-        <div class="card-icon">
-            <i class="fa-regular fa-circle"></i>
-        </div>
-        <p class = "descricao">
-            Tarefa
-        </p>
-    </div>
-    <div class="card-delete">
-        <i class="fa-regular fa-trash-can"></i>
-    </div>
+<div class="card-tarefa pendente/concluida" data-id="123"> //card criar e depois inner
+  <div class="tarefa">
+    <button class="card-icon" data-action="alternar">  
+      <i aria-hidden="true"></i>
+      "fa-regular fa-circle-check" true
+      "fa-regular fa-circle"; false
+    </button> 
+    // aria-label="Marcar tarefa como concluída / Marcar tarefa como pendente" aria-checked="false/true"
+
+    <p class="descricao"></p>
+  </div>
+
+  <button class="card-delete" data-action="excluir" aria-label="Excluir tarefa">
+    <i class="fa-regular fa-trash-can" aria-hidden="true"></i>
+  </button>
 </div>
