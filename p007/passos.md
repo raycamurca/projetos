@@ -48,18 +48,18 @@ Regra principal:
 - [X] **Resultado esperado:** apenas a aba selecionada fica visivel.
 
 ### 5) Criar card de tarefa
-- [ ] **Objetivo tecnico:** padronizar a criacao dos cards.
-- [ ] **O que fazer na logica:**
+- [X] **Objetivo tecnico:** padronizar a criacao dos cards.
+- [X] **O que fazer na logica:**
   - criar `criarCardTarefa(tarefa)`
   - montar card com descricao, acao de alternar e acao de excluir
   - adicionar `data-id` no card
   - usar `data-action="alternar"` e `data-action="excluir"`
   - aplicar visual de concluida quando `tarefa.concluida` for `true`
-- [ ] **Resultado esperado:** cada tarefa vira um elemento pronto para interacao.
+- [X] **Resultado esperado:** cada tarefa vira um elemento pronto para interacao.
 
 ### 6) Implementar renderizacao principal
-- [ ] **Objetivo tecnico:** redesenhar a tela sempre que o estado mudar.
-- [ ] **O que fazer na logica:**
+- [X] **Objetivo tecnico:** redesenhar a tela sempre que o estado mudar.
+- [X] **O que fazer na logica:**
   - criar `renderizar()`
   - limpar as listas antes de desenhar novamente
   - percorrer `estado.tarefas` e distribuir:
@@ -68,24 +68,24 @@ Regra principal:
     - em `concluidas` se `concluida === true`
   - chamar `atualizarResumoTopo()`
   - chamar `atualizarMensagensVazias()`
-- [ ] **Resultado esperado:** conteudo das abas sempre sincronizado com o estado.
+- [X] **Resultado esperado:** conteudo das abas sempre sincronizado com o estado.
 
 ### 7) Atualizar resumo do topo
-- [ ] **Objetivo tecnico:** exibir contadores corretos.
-- [ ] **O que fazer na logica:**
+- [X] **Objetivo tecnico:** exibir contadores corretos.
+- [X] **O que fazer na logica:**
   - criar `atualizarResumoTopo()`
   - calcular total pendente e total concluida
   - atualizar texto do topo (ex.: `2 pendentes · 1 concluida`)
-- [ ] **Resultado esperado:** resumo reflete o estado atual apos qualquer acao.
+- [X] **Resultado esperado:** resumo reflete o estado atual apos qualquer acao.
 
 ### 8) Atualizar mensagens de vazio
-- [ ] **Objetivo tecnico:** mostrar feedback quando nao houver itens.
-- [ ] **O que fazer na logica:**
+- [X] **Objetivo tecnico:** mostrar feedback quando nao houver itens.
+- [X] **O que fazer na logica:**
   - criar `atualizarMensagensVazias()`
   - exibir mensagem de `todas` quando `estado.tarefas.length === 0`
   - exibir mensagem de `pendentes` quando nao houver pendentes
   - exibir mensagem de `concluidas` quando nao houver concluidas
-- [ ] **Resultado esperado:** cada aba mostra o estado vazio correto.
+- [X] **Resultado esperado:** cada aba mostra o estado vazio correto.
 
 ### 9) Adicionar tarefa
 - [ ] **Objetivo tecnico:** incluir novas tarefas com validacao.
