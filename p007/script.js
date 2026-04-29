@@ -14,7 +14,9 @@ const seletores = {
   conteudos: document.querySelectorAll(".conteudo"),
   abaTodas: document.querySelector("#todas"),
   abaPendentes: document.querySelector("#pendentes"),
-  abaConcluidas: document.querySelector("#concluidas")
+  abaConcluidas: document.querySelector("#concluidas"),
+  iconErro: '<i class="fa-solid fa-circle-xmark"></i>',
+  circles: document.querySelectorAll(".fa-circle"),
 };
 
 //Função gerarId
@@ -96,49 +98,51 @@ function criarCardTarefa(tarefa) {
 
 //Função rederizar
 
-function renderizar(){
-    seletores.abaTodas.innerHTML = "";
-    seletores.abaPendentes.innerHTML = "";
-    seletores.abaConcluidas.innerHTML = "";
+function renderizar() {
+  seletores.abaTodas.innerHTML = "";
+  seletores.abaPendentes.innerHTML = "";
+  seletores.abaConcluidas.innerHTML = "";
 
-    estado.tarefas.forEach(tarefa =>{
-        const tarefaAtual = criarCardTarefa(tarefa);
-        seletores.abaTodas.appendChild(tarefaAtual);
+  estado.tarefas.forEach(tarefa => {
+    const tarefaAtual = criarCardTarefa(tarefa);
+    seletores.abaTodas.appendChild(tarefaAtual);
 
-        if(!tarefa.concluida){
-            seletores.abaPendentes.appendChild(tarefaAtual);
-        }
-        if(tarefa.concluida){
-            seletores.abaConcluidas.appendChild(tarefaAtual);
-        }
-    })
+    if (!tarefa.concluida) {
+      const cardPendente = criarCardTarefa(tarefa);
+      seletores.abaPendentes.appendChild(cardPendente);
+    }
+    if (tarefa.concluida) {
+      const cardConcluida = criarCardTarefa(tarefa);
+      seletores.abaConcluidas.appendChild(cardConcluida);
+    }
+  });
 
-    atualizarResumoTopo();
-    atualizarMensagensVazias();
+  atualizarResumoTopo();
+  atualizarMensagensVazias();
 }
 
 //Atualizar resumo do topo
 
-function atualizarResumoTopo(){
-    let totalPendentes = 0;
-    let totalConcluidas = 0;
-    estado.tarefas.forEach(tarefa =>{
-        if(!tarefa.concluida){
-            totalPendentes++
-        }
-        if(tarefa.concluida){
-            totalConcluidas++
-        }
-    })
+function atualizarResumoTopo() {
+  let totalPendentes = 0;
+  let totalConcluidas = 0;
+  estado.tarefas.forEach(tarefa => {
+    if (!tarefa.concluida) {
+      totalPendentes++;
+    }
+    if (tarefa.concluida) {
+      totalConcluidas++;
+    }
+  });
 
-    seletores.infoTopo.textContent = `${totalPendentes} pendentes · ${totalConcluidas} concluídas`
+  seletores.infoTopo.textContent = `${totalPendentes} pendentes · ${totalConcluidas} concluídas`;
 }
 
 //Atualizar msg vazia
 
-function atualizarMensagensVazias(){
-    if(estado.tarefas.length === 0){
-        seletores.abaTodas.innerHTML = `
+function atualizarMensagensVazias() {
+  if (estado.tarefas.length === 0) {
+    seletores.abaTodas.innerHTML = `
             <div class="conteudo-todas">
                 <div class="icon-conteudo">
                     <i class="fa-solid fa-check"></i>
@@ -150,13 +154,15 @@ function atualizarMensagensVazias(){
                     <p>Adicione uma tarefa para comecar.</p>
                 </div>
             </div>
-        `
-    }
+        `;
+  }
 
-    const totTarefasPendentes = estado.tarefas.filter(tarefa => !tarefa.concluida).length
+  const totTarefasPendentes = estado.tarefas.filter(
+    tarefa => !tarefa.concluida
+  ).length;
 
-    if(totTarefasPendentes === 0){
-        seletores.abaPendentes.innerHTML = `
+  if (totTarefasPendentes === 0) {
+    seletores.abaPendentes.innerHTML = `
         <div class="conteudo-pendentes">
             <div class="icon-conteudo">
                 <i class="fa-solid fa-check"></i>
@@ -168,13 +174,15 @@ function atualizarMensagensVazias(){
                 <p>Mude o filtro para ver outras tarefas.</p>
             </div>
         </div>
-        `
-    }
+        `;
+  }
 
-    const totTarefasConcluidas = estado.tarefas.filter(tarefa => tarefa.concluida).length
+  const totTarefasConcluidas = estado.tarefas.filter(
+    tarefa => tarefa.concluida
+  ).length;
 
-    if(totTarefasConcluidas === 0){
-        seletores.abaConcluidas.innerHTML = `
+  if (totTarefasConcluidas === 0) {
+    seletores.abaConcluidas.innerHTML = `
             <div class="conteudo-concluido">
                 <div class="icon-conteudo">
                     <i class="fa-solid fa-check"></i>
@@ -186,6 +194,42 @@ function atualizarMensagensVazias(){
                     <p>Mude o filtro para ver outras tarefas.</p>
                 </div>
             </div>
-        `
-    }
+        `;
+  }
+}
+
+seletores.btnAdd.addEventListener("click", () => {
+  adicionarTarefa(seletores.input);
+});
+
+//Adicionar Tarefa
+
+function adicionarTarefa(inputTarefa) {
+  seletores.spanErro.innerHTML = "";
+  const tarefaValue = inputTarefa.value;
+  if (normalizarTexto(tarefaValue) === "") {
+    return (seletores.spanErro.innerHTML = `${seletores.iconErro} Digite uma tarefa!`);
+  }
+
+  const existeDuplicidade = estado.tarefas.some(
+    tarefa => normalizarTexto(tarefa.texto) === normalizarTexto(tarefaValue)
+  );
+
+  if (existeDuplicidade) {
+    return (seletores.spanErro.innerHTML = `${seletores.iconErro} A tarefa já existe`);
+  }
+
+  const tarefa = { id: gerarId(), texto: tarefaValue, concluida: false };
+  estado.tarefas.push(tarefa);
+
+  inputTarefa.value = "";
+  inputTarefa.focus();
+
+  renderizar();
+}
+
+// alternar Conclusao
+
+function alternarConclusao(idTarefa) {
+  
 }

@@ -88,14 +88,14 @@ Regra principal:
 - [X] **Resultado esperado:** cada aba mostra o estado vazio correto.
 
 ### 9) Adicionar tarefa
-- [ ] **Objetivo tecnico:** incluir novas tarefas com validacao.
-- [ ] **O que fazer na logica:**
+- [X] **Objetivo tecnico:** incluir novas tarefas com validacao.
+- [X] **O que fazer na logica:**
   - criar `adicionarTarefa()`
   - validar campo vazio
   - validar duplicidade com `normalizarTexto()`
   - inserir em `estado.tarefas` com `concluida: false`
   - limpar input, focar input e chamar `renderizar()`
-- [ ] **Resultado esperado:** nova tarefa aparece em `todas` e `pendentes`.
+- [X] **Resultado esperado:** nova tarefa aparece em `todas` e `pendentes`.
 
 ### 10) Marcar/desmarcar tarefa como concluida
 - [ ] **Objetivo tecnico:** alterar estado da tarefa sem perder dados.
