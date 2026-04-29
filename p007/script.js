@@ -228,4 +228,8 @@ function adicionarTarefa(inputTarefa) {
 
 // alternar Conclusao
 
-function alternarConclusao(idTarefa) {}
+function alternarConclusao(idTarefa) {
+
+
+  renderizar()
+}
