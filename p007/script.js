@@ -1,5 +1,3 @@
-// modelo das tarefas: `id`, `texto`, `concluida`
-
 const estado = {
   tarefas: [],
   abaAtiva: "todas",
@@ -230,6 +228,4 @@ function adicionarTarefa(inputTarefa) {
 
 // alternar Conclusao
 
-function alternarConclusao(idTarefa) {
-  
-}
+function alternarConclusao(idTarefa) {}
