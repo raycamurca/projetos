@@ -283,5 +283,9 @@ function tratarEnter(evt) {
   }
 }
 
+// salvarLocalStorage()
+// carregarLocalStorage()
+
+
 mudarAba(estado.abaAtiva);
 renderizar();
