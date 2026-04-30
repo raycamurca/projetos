@@ -14,8 +14,12 @@ const seletores = {
   abaPendentes: document.querySelector("#pendentes"),
   abaConcluidas: document.querySelector("#concluidas"),
   iconErro: '<i class="fa-solid fa-circle-xmark"></i>',
-  circles: document.querySelectorAll(".fa-circle"),
 };
+
+// Chamar função concluida ou remover
+
+document.addEventListener("click", tratarCliques);
+seletores.input.addEventListener("keyup", tratarEnter);
 
 //Função gerarId
 
@@ -33,13 +37,7 @@ function normalizarTexto(texto) {
   return texto.trim().toLowerCase();
 }
 
-// alternar abas
-
-seletores.botoesAbas.forEach(botao => {
-  botao.addEventListener("click", () => {
-    mudarAba(botao.dataset.aba);
-  });
-});
+// Função mudar abas
 
 function mudarAba(idAba) {
   estado.abaAtiva = idAba;
@@ -61,18 +59,18 @@ function criarCardTarefa(tarefa) {
   card.classList.toggle("pendente", !tarefa.concluida);
 
   card.innerHTML = `
-        <div class="tarefa">
-            <button class="card-icon" data-action="alternar">
-                <i aria-hidden="true"></i>
-            </button>
-
-            <p class="descricao"></p>
-        </div>
-
-        <button class="card-delete" data-action="excluir" aria-label="Excluir tarefa">
-            <i class="fa-regular fa-trash-can" aria-hidden="true"></i>
+      <div class="tarefa">
+        <button class="card-icon" data-action="alternar">
+          <i aria-hidden="true"></i>
         </button>
-    `;
+
+        <p class="descricao"></p>
+      </div>
+
+      <button class="card-delete" data-action="excluir" aria-label="Excluir tarefa">
+        <i class="fa-regular fa-trash-can" aria-hidden="true"></i>
+      </button>
+  `;
 
   const cardIcon = card.querySelector(".card-icon");
   cardIcon.setAttribute(
@@ -196,10 +194,6 @@ function atualizarMensagensVazias() {
   }
 }
 
-seletores.btnAdd.addEventListener("click", () => {
-  adicionarTarefa(seletores.input);
-});
-
 //Adicionar Tarefa
 
 function adicionarTarefa(inputTarefa) {
@@ -229,7 +223,65 @@ function adicionarTarefa(inputTarefa) {
 // alternar Conclusao
 
 function alternarConclusao(idTarefa) {
+  estado.tarefas = estado.tarefas.map(tarefa => {
+    if (tarefa.id === idTarefa) {
+      return {
+        ...tarefa,
+        concluida: !tarefa.concluida,
+      };
+    }
+    return tarefa;
+  });
 
-
-  renderizar()
+  renderizar();
 }
+
+// Remover tarefa
+
+function removerTarefa(idTarefa) {
+  estado.tarefas = estado.tarefas.filter(tarefa => tarefa.id !== idTarefa);
+
+  renderizar();
+}
+
+function tratarCliques(evt) {
+  const botao = evt.target.closest("button");
+
+  if (!botao) return;
+
+  if (botao.dataset.aba) {
+    mudarAba(botao.dataset.aba);
+    return;
+  }
+
+  const acao = botao.dataset.action;
+
+  if (!acao) return;
+
+  if (acao === "adicionar") {
+    adicionarTarefa(seletores.input);
+  }
+
+  const card = botao.closest(".card-tarefa");
+
+  if (!card) return;
+
+  const idTarefa = card.dataset.id;
+
+  if (acao === "alternar") {
+    alternarConclusao(idTarefa);
+  }
+
+  if (acao === "excluir") {
+    removerTarefa(idTarefa);
+  }
+}
+
+function tratarEnter(evt) {
+  if (evt.key === "Enter") {
+    adicionarTarefa(seletores.input);
+  }
+}
+
+mudarAba(estado.abaAtiva);
+renderizar();

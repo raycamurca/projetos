@@ -98,47 +98,47 @@ Regra principal:
 - [X] **Resultado esperado:** nova tarefa aparece em `todas` e `pendentes`.
 
 ### 10) Marcar/desmarcar tarefa como concluida
-- [ ] **Objetivo tecnico:** alterar estado da tarefa sem perder dados.
-- [ ] **O que fazer na logica:**
+- [X] **Objetivo tecnico:** alterar estado da tarefa sem perder dados.
+- [X] **O que fazer na logica:**
   - criar `alternarConclusao(idTarefa)`
   - inverter valor de `concluida` da tarefa alvo
   - chamar `renderizar()`
-- [ ] **Resultado esperado:**
+- [X] **Resultado esperado:**
   - ao concluir, sai de `pendentes` e entra em `concluidas`
   - ao desmarcar, sai de `concluidas` e volta para `pendentes`
 
 ### 11) Deletar tarefa
-- [ ] **Objetivo tecnico:** remover tarefa por id.
-- [ ] **O que fazer na logica:**
+- [X] **Objetivo tecnico:** remover tarefa por id.
+- [X] **O que fazer na logica:**
   - criar `removerTarefa(idTarefa)`
   - filtrar `estado.tarefas` removendo o id informado
   - chamar `renderizar()`
-- [ ] **Resultado esperado:** tarefa removida de todas as abas.
+- [X] **Resultado esperado:** tarefa removida de todas as abas.
 
 ### 12) Implementar delegacao de eventos dos cards
-- [ ] **Objetivo tecnico:** manter eventos funcionando apos cada render.
-- [ ] **O que fazer na logica:**
+- [X] **Objetivo tecnico:** manter eventos funcionando apos cada render.
+- [X] **O que fazer na logica:**
   - criar `tratarCliqueLista(evento)`
   - localizar `data-action` clicado
   - localizar `idTarefa` no card pai
   - chamar `alternarConclusao()` ou `removerTarefa()`
   - registrar listener nos containers `todas`, `pendentes` e `concluidas`
-- [ ] **Resultado esperado:** acoes dos cards funcionam sem criar listeners por item.
+- [X] **Resultado esperado:** acoes dos cards funcionam sem criar listeners por item.
 
 ### 13) Conectar eventos gerais
-- [ ] **Objetivo tecnico:** ligar a logica aos controles da tela.
-- [ ] **O que fazer na logica:**
+- [X] **Objetivo tecnico:** ligar a logica aos controles da tela.
+- [X] **O que fazer na logica:**
   - no clique do botao, chamar `adicionarTarefa()`
   - no Enter do input, chamar `adicionarTarefa()`
   - no clique das abas (`data-aba`), chamar `mudarAba(idAba)`
-- [ ] **Resultado esperado:** interface responde aos comandos principais.
+- [X] **Resultado esperado:** interface responde aos comandos principais.
 
 ### 14) Inicializar aplicacao
-- [ ] **Objetivo tecnico:** iniciar interface consistente.
-- [ ] **O que fazer na logica:**
+- [X] **Objetivo tecnico:** iniciar interface consistente.
+- [X] **O que fazer na logica:**
   - executar `mudarAba(estado.abaAtiva)`
   - executar `renderizar()`
-- [ ] **Resultado esperado:** app inicia na aba `todas` com estado sincronizado.
+- [X] **Resultado esperado:** app inicia na aba `todas` com estado sincronizado.
 
 ## Regras finais da renderizacao
 
