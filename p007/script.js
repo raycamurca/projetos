@@ -113,7 +113,6 @@ function renderizar() {
     }
   });
 
-  salvarLocalStorage();
   atualizarResumoTopo();
   atualizarMensagensVazias();
 }
@@ -285,15 +284,12 @@ function tratarEnter(evt) {
 }
 
 function salvarLocalStorage() {
-  localStorage.setItem("tarefas", JSON.stringify(estado.tarefas));
+  // em breve
 }
 
 function carregarLocalStorage() {
-  const tarefasSalvas = localStorage.getItem("tarefas");
-  if (!tarefasSalvas) return;
-  estado.tarefas = JSON.parse(tarefasSalvas);
+  //em breve
 }
 
-carregarLocalStorage();
 mudarAba(estado.abaAtiva);
 renderizar();
