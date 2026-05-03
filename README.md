@@ -2,14 +2,12 @@
  Coleção de projetos práticos desenvolvidos para estudar e aprimorar habilidades em programação.
 
 
- <a href="https://raycamurca.github.io/projetos/p001" target="_blank" rel="external">Projeto 01 - Site Anime</a>
+ <a href="https://raycamurca.github.io/projetos/anime" target="_blank" rel="external">Projeto 01 - anime</a>
  <br>
- <a href="https://raycamurca.github.io/projetos/p002" target="_blank" rel="external">Projeto 02 - Site Android</a>
+ <a href="https://raycamurca.github.io/projetos/login" target="_blank" rel="external">Projeto 02 - login</a>
 <br>
-<a href="https://raycamurca.github.io/projetos/p003" target="_blank" rel="external">Projeto 03 - Site Cordel</a>
+<a href="https://raycamurca.github.io/projetos/form-login" target="_blank" rel="external">Projeto 03 - formulario-login</a>
 <br>
-<a href="https://raycamurca.github.io/projetos/p004" target="_blank" rel="external">Projeto 04 - Site Social</a>
+<a href="https://raycamurca.github.io/projetos/to-do-list" target="_blank" rel="external">Projeto 04 - to do list</a>
 <br>
-<a href="https://raycamurca.github.io/projetos/p005" target="_blank" rel="external">Projeto 05 - Site Pag-Login</a>
-<br>
-<a href="https://raycamurca.github.io/projetos/p006" target="_blank" rel="external">Projeto 06 - Site Formulário</a>
+<a href="https://raycamurca.github.io/projetos/pastelaria" target="_blank" rel="external">Projeto 05 - landing page</a>
