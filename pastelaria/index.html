@@ -9,279 +9,200 @@
 </head>
 
 <body>
-    <header id="header">
-        <div class="logo-name">
-            <!-- ICON -->
+    <header class="header">
+        <div class="header__logo">
             <p>Pastelaria Z</p>
         </div>
-        <div class="theme-menu">
+        <div class="header__actions">
             <!-- ICON THEME -->
-            <!-- ICONN MENU -->
+            <!-- ICON MENU -->
         </div>
     </header>
-    <nav id="nav">
-        <ul>
-            <li>
-                <a href="#cardapio">Cardápio</a>
-            </li>
-            <li>
-                <a href="#diferenciais">Diferenciais</a>
-            </li>
-            <li>
-                <a href="#depoimentos">Depoimentos</a>
-            </li>
-            <li>
-                <a href="#sobre">Sobre</a>
-            </li>
-            <li>
-                <a href="#contato">Contato</a>
-            </li>
-            <li>
-                <button>Pedir no WhatsApp</button>
-            </li>
+
+    <nav class="nav">
+        <ul class="nav__list">
+            <li class="nav__item"><a class="nav__link" href="#cardapio">Cardápio</a></li>
+            <li class="nav__item"><a class="nav__link" href="#diferenciais">Diferenciais</a></li>
+            <li class="nav__item"><a class="nav__link" href="#depoimentos">Depoimentos</a></li>
+            <li class="nav__item"><a class="nav__link" href="#sobre">Sobre</a></li>
+            <li class="nav__item"><a class="nav__link" href="#contato">Contato</a></li>
+            <li class="nav__item"><button class="nav__cta">Pedir no WhatsApp</button></li>
         </ul>
     </nav>
 
-    <main id="main">
-        <section id="inicio">
-            <div>
-                <!-- icon -->
+    <main class="main">
+        <section id="inicio" class="hero">
+            <div class="hero__badge">
                 <p>Fritamos na hora do seu pedido</p>
             </div>
 
-            <div class="title-info">
-                <h1>O melhor pastel da cidade</h1>
-                <p>
-                    Massa fininha e crocante, recheios generosos e aquele sabor que você lembra da infância. Peça agora
-                    e receba quentinho.
+            <div class="hero__content">
+                <h1 class="hero__title">O melhor pastel da cidade</h1>
+                <p class="hero__description">
+                    Massa fininha e crocante, recheios generosos e aquele sabor que você lembra da infância.
                 </p>
             </div>
 
-            <div class="whatsapp">
-                <!-- icon -->
+            <div class="hero__cta">
                 <p>Pedir no WhatsApp</p>
             </div>
         </section>
 
-        <section id="#cardapio">
-            <div class="title">
+        <section id="cardapio" class="menu">
+            <div class="menu__header">
                 <p>Nosso cardápio</p>
                 <h2>Sabores que conquistam</h2>
             </div>
 
-            <div class="info-cardapio">
-                <p>
-                    Diversos sabores feitos com ingredientes selecionados. Escolha o seu.
-                </p>
+            <div class="menu__description">
+                <p>Diversos sabores feitos com ingredientes selecionados.</p>
             </div>
 
-            <div class="card-sabores">
-                <div class="card-sabor">
-                    <div class="img">
+            <div class="menu__list">
+                <div class="product-card">
+                    <div class="product-card__image">
                         <img src="" alt="">
                     </div>
 
-                    <div class="info-sabor">
-                        <div class="nome-preco">
-                            <h3>Pastel de Carne</h3>
-                            <p>R$ 7</p>
+                    <div class="product-card__content">
+                        <div class="product-card__header">
+                            <h3 class="product-card__title">Pastel de Carne</h3>
+                            <p class="product-card__price">R$ 7</p>
                         </div>
-                        <div class="descricao">
-                            <p>
-                                Carne moída temperada na hora, cebola e azeitonas pretas.
-                            </p>
-                        </div>
+                        <p class="product-card__description">
+                            Carne moída temperada na hora.
+                        </p>
                     </div>
 
-                    <button>Pedir este sabor</button>
+                    <button class="product-card__button">Pedir este sabor</button>
                 </div>
 
-                <div class="card-sabor">
-                    <div class="img">
+                <div class="product-card">
+                    <div class="product-card__image">
                         <img src="" alt="">
                     </div>
 
-                    <div class="info-sabor">
-                        <div class="nome-preco">
-                            <h3>Pastel de Queijo</h3>
-                            <p>R$ 9</p>
+                    <div class="product-card__content">
+                        <div class="product-card__header">
+                            <h3 class="product-card__title">Pastel de Queijo</h3>
+                            <p class="product-card__price">R$ 9</p>
                         </div>
-                        <div class="descricao">
-                            <p>
-                                Mussarela derretida que escorre na primeira mordida.
-                            </p>
-                        </div>
+                        <p class="product-card__description">
+                            Mussarela derretida deliciosa.
+                        </p>
                     </div>
 
-                    <button>Pedir este sabor</button>
+                    <button class="product-card__button">Pedir este sabor</button>
                 </div>
             </div>
-
         </section>
 
-        <section id="#diferenciais">
-            <div class="title">
+        <section id="diferenciais" class="features">
+            <div class="features__header">
                 <p>Por que somos especiais</p>
-                <h2>Feito com carinho, servido com orgulho</h2>
+                <h2>Feito com carinho</h2>
             </div>
 
-            <div class="card-diferenciais">
-                <div class="card-diferencial">
-                    <div class="icon-diferencial">
-                        <!-- ICON -->
-                    </div>
-                    <div class="info-diferencial">
-                        <h3>Massa crocante</h3>
-                        <p>
-                            Receita artesanal e fritura na hora — aquela casquinha estaladinha.
-                        </p>
+            <div class="features__list">
+                <div class="feature-card">
+                    <div class="feature-card__icon"></div>
+                    <div class="feature-card__content">
+                        <h3 class="feature-card__title">Massa crocante</h3>
+                        <p class="feature-card__description">Receita artesanal.</p>
                     </div>
                 </div>
 
-                <div class="card-diferencial">
-                    <div class="icon-diferencial">
-                        <!-- ICON -->
-                    </div>
-                    <div class="info-diferencial">
-                        <h3>Ingredientes frescos</h3>
-                        <p>
-                            Selecionamos diariamente o que há de melhor para o seu pastel.
-                        </p>
+                <div class="feature-card">
+                    <div class="feature-card__icon"></div>
+                    <div class="feature-card__content">
+                        <h3 class="feature-card__title">Ingredientes frescos</h3>
+                        <p class="feature-card__description">Selecionados diariamente.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="#depoimentos">
-            <div class="title">
+        <section id="depoimentos" class="testimonials">
+            <div class="testimonials__header">
                 <p>Depoimentos</p>
                 <h2>Quem prova, ama</h2>
             </div>
-            <div>
-                <div class="card-comentario">
-                    <div class="estrelas">
-                        <!-- ICON -->
-                    </div>
-                    <div class="comentario">
-                        <p>
-                            "O melhor pastel que já comi na vida! A massa é fininha e o recheio super generoso. Toda
-                            sexta é dia de pedir aqui em casa."
-                        </p>
-                    </div>
-                    <div class="cliente">
-                        <p class="nome-cliente">Goku</p>
-                        <p class="descricao-cliente">Cliente desde 1986</p>
-                    </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-card__rating"></div>
+                <p class="testimonial-card__text">
+                    "O melhor pastel que já comi!"
+                </p>
+                <div class="testimonial-card__author">
+                    <p class="testimonial-card__name">Goku</p>
+                    <p class="testimonial-card__meta">Cliente desde 1986</p>
                 </div>
             </div>
         </section>
 
-        <section id="#sobre">
-            <div id="img-pastelaria">
+        <section id="sobre" class="about">
+            <div class="about__image">
                 <img src="" alt="pastelaria">
             </div>
 
-            <div class="title">
+            <div class="about__content">
                 <p>Nossa história</p>
-                <h2>Uma família, um sabor inesquecível</h2>
-            </div>
-
-            <div class="historia">
-                <p>
-                    A Pastelaria Z nasceu em 1990 de um sonho do Seu João: trazer para o bairro o pastel que ele
-                    aprendeu a fazer com sua avó. Hoje, somos referência na cidade, mantendo a mesma receita artesanal e
-                    o carinho de uma cozinha de família.
-
-                    Cada pastel é montado e frito na hora, com ingredientes selecionados todos os dias. Porque o que faz
-                    um pastel inesquecível é o cuidado que ninguém vê — mas todo mundo sente.
+                <h2>Uma família, um sabor</h2>
+                <p class="about__text">
+                    A Pastelaria Z nasceu em 1990...
                 </p>
             </div>
 
-            <div class="info-geral">
-                <div class="card-info">
-                    <h3>+10</h3>
-                    <p>Sabores</p>
+            <div class="stats">
+                <div class="stat-card">
+                    <h3 class="stat-card__value">+10</h3>
+                    <p class="stat-card__label">Sabores</p>
                 </div>
-                <div class="card-info">
-                    <h3>50K</h3>
-                    <p>Clientes Felizes</p>
-                </div>
-                <div class="card-info">
-                    <h3>4.9<!--ICON--></h3>
-                    <p>Avaliação média</p>
+                <div class="stat-card">
+                    <h3 class="stat-card__value">50K</h3>
+                    <p class="stat-card__label">Clientes</p>
                 </div>
             </div>
         </section>
 
-        <section id="#contato">
-            <div class="title">
+        <section id="contato" class="contact">
+            <div class="contact__header">
                 <p>Fale com a gente</p>
-                <h2>Bateu a fome? Chama no zap.</h2>
+                <h2>Bateu a fome?</h2>
             </div>
 
-            <div class="info-contato">
-                <p>
-                    Atendimento rápido, sem complicação. Faça seu pedido agora e receba quentinho.
-                </p>
-                <button class="btn-whatsapp">
-                    <!--ICON-->Pedir no WhatsApp
-                </button>
+            <div class="contact__content">
+                <p>Peça agora e receba quentinho.</p>
+                <button class="contact__cta">Pedir no WhatsApp</button>
             </div>
 
-            <div class="card-infos">
-                <div class="card">
-                    <!-- ICON -->
-                    <p>TELEFONE</p>
-                    <p><strong>(11) 99999-9999</strong></p>
-                </div>
-
-                <div class="card">
-                    <!-- ICON -->
-                    <p>ENDEREÇO</p>
-                    <p><strong>Kame House — Centro</strong></p>
-                </div>
-
-                <div class="card">
-                    <!-- ICON -->
-                    <p>HORÁRIO</p>
-                    <p><strong>Ter-Dom | 11h às 23h</strong></p>
+            <div class="contact__info-list">
+                <div class="contact-card">
+                    <p class="contact-card__label">TELEFONE</p>
+                    <p class="contact-card__value">(11) 99999-9999</p>
                 </div>
             </div>
         </section>
-
     </main>
 
-    <footer>
-        <div class="logo-name">
-            <!-- ICON -->
+    <footer class="footer">
+        <div class="footer__logo">
             <p>Pastelaria Z</p>
         </div>
 
-        <p>O sabor caseiro do pastel artesanal, na sua mesa em até 30 minutos.</p>
+        <p class="footer__description">
+            O sabor caseiro do pastel artesanal.
+        </p>
 
-        <div>
-            <h3>Horário</h3>
-            <p>Terça a Domingo · 11h às 23h</p>
-            <p>Segunda · Fechado</p>
-        </div>
-
-        <div>
+        <div class="footer__section">
             <h3>Contato</h3>
             <p>(11) 99999-9999</p>
-            <p>Kame House — Centro</p>
         </div>
 
-        <div class="icon-contantos">
-            <div id="instagram">
-                <!-- ICON INSTA -->
-            </div>
-            <div id="tiktok">
-                <!-- ICON TIKTOK -->
-            </div>
-        </div>
+        <div class="footer__social"></div>
 
-        <div class="direitos">
-            <p>© 2026 Pastelaria Z. Todos os direitos reservados.</p>
+        <div class="footer__copyright">
+            <p>© 2026 Pastelaria Z</p>
         </div>
     </footer>
 
