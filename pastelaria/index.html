@@ -5,63 +5,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>landing page - pastelaria</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="src/styles/style.css">
 </head>
 
 <body>
-    <header class="header">
-        <div class="header-logo">
-            <p>Pastelaria Z</p>
-        </div>
-        <div class="header-actions">
-            <!-- ICON THEME -->
-            <!-- ICON MENU -->
-        </div>
-    </header>
+    <div class="topo">
+        <header class="header">
+            <div class="header-logo">
+                <p>🥟 Sabor do <span class="highlight">Pastel</span></p>
+            </div>
+            <div class="header-actions">
+                <i class="fa-solid fa-sun"></i>
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </header>
+        <nav class="nav">
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a class="nav-link" href="#cardapio">Cardápio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#diferenciais">Diferenciais</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#depoimentos">Depoimentos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#sobre">Sobre</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contato">Contato</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-cta" href="https://wa.me/55SEUNUMERO">
+                        Pedir no WhatsApp
+                    </a>
+                </li>
+            </ul>
+        </nav>
 
-    <nav class="nav">
-        <ul class="nav-list">
-            <li class="nav-item">
-                <a class="nav-link" href="#cardapio">Cardápio</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#diferenciais">Diferenciais</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#depoimentos">Depoimentos</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#sobre">Sobre</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#contato">Contato</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-cta" href="https://wa.me/55SEUNUMERO">
-                    Pedir no WhatsApp
-                </a>
-            </li>
-        </ul>
-    </nav>
-
-    <main class="main">
         <section id="inicio" class="hero">
             <div class="hero-badge">
-                <p>Fritamos na hora do seu pedido</p>
+                <p><i class="fa-solid fa-fire"></i> Fritamos na hora do seu pedido</p>
             </div>
-
             <div class="hero-content">
-                <h1 class="hero-title">O melhor pastel da cidade</h1>
+                <h1 class="hero-title">O melhor <span class="highlight">pastel</span> da cidade</h1>
                 <p class="hero-description">
                     Massa fininha e crocante, recheios generosos e aquele sabor que você lembra da infância.
                 </p>
             </div>
-
             <a href="https://wa.me/55SEUNUMERO" class="hero-cta">
-                Pedir no WhatsApp
+                <i class="fa-brands fa-whatsapp"></i>Pedir no WhatsApp
             </a>
         </section>
+    </div>
 
+    <main class="main">
         <section id="cardapio" class="menu">
             <div class="menu-header">
                 <p>Nosso cardápio</p>
