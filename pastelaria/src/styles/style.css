@@ -1,232 +1,179 @@
 @charset "UTF-8";
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&display=swap');
 
 :root {
-  /* ================= CORES BASE ================= */
-  --cor-branco: #FFFFFF;
-  --cor-creme: #FEF9F1;
-  --cor-texto: #200A05;
-  --cor-texto-suave: #553B32;
-  --cor-borda: #DECEBC;
+  /* ================= BASE (CORES CRUAS) ================= */
+  --color-white: #FFFFFF;
+  --color-cream: #FEF9F1;
+  --color-dark: #200A05;
 
-  /* ================= CORES DE DESTAQUE ================= */
-  --cor-amarelo: #EDAA00;
-  --cor-laranja: #E34D00;
-  --cor-vermelho: #D40E14;
-  --cor-whatsapp: #03A14A;
+  --color-yellow: #EDAA00;
+  --color-orange: #E34D00;
+  --color-red: #D40E14;
+  --color-green: #03A14A;
 
-  /* ================= GRADIENTES ================= */
-  --gradiente-primario: linear-gradient(
+  --color-border-light: #DECEBC;
+
+  /* ================= BACKGROUND ================= */
+  --bg-main: var(--color-cream);
+  --bg-card: var(--color-white);
+  --bg-navbar: var(--color-white);
+
+  /* ================= TEXT ================= */
+  --text-primary: var(--color-dark);
+  --text-secondary: #553B32;
+  --text-light: #FFFFFFE6;
+
+  /* ================= BRAND ================= */
+  --accent-primary: var(--color-orange);
+  --accent-secondary: var(--color-yellow);
+  --accent-danger: var(--color-red);
+  --accent-success: var(--color-green);
+
+  /* ================= GRADIENTS ================= */
+  --gradient-primary: linear-gradient(
     135deg,
-    #EDAA00 0%,
-    #E34D00 50%,
-    #D40E14 100%
+    var(--color-yellow) 0%,
+    var(--color-orange) 50%,
+    var(--color-red) 100%
   );
 
-  --gradiente-diferenciais: linear-gradient(
+  --gradient-soft: linear-gradient(
     180deg,
     #FFF7EA 0%,
     #FFE7CE 100%
   );
 
-  /* ================= SOMBRAS ================= */
-  --sombra-padrao: #00000026;
-  --sombra-hover: #E34D0059;
+  /* ================= SHADOWS ================= */
+  --shadow-sm: 0 2px 6px #0000001A;
+  --shadow-md: 0 4px 10px #00000026;
+  --shadow-lg: 0 8px 20px #00000033;
 
-  /* ================= TRANSPARÊNCIAS ================= */
-  --branco-fraco: #FFFFFF1A;
-  --branco-medio: #FFFFFF33;
+  --shadow-hover: 0 6px 16px #E34D0059;
+
+  /* ================= BORDERS ================= */
+  --border-default: var(--color-border-light);
+
+  /* ================= TRANSPARENCY ================= */
+  --white-10: #FFFFFF1A;
+  --white-20: #FFFFFF33;
+
+  /* ================= STATES ================= */
+  --hover-opacity: 0.85;
+  --active-scale: 0.97;
 
   /* ================= HERO ================= */
-  --inicio-fundo-overlay: linear-gradient(
+  --hero-overlay: linear-gradient(
     180deg,
     #00000066 0%,
     #000000BF 100%
   );
 
-  --inicio-titulo: var(--cor-branco);
-  --inicio-subtitulo: #FFFFFFE6;
-  --inicio-badge-fundo: var(--branco-fraco);
-  --inicio-badge-borda: var(--branco-medio);
-  --inicio-destaque: var(--cor-amarelo);
-  --inicio-destaque-gradiente: var(--gradiente-primario);
+  --hero-title: var(--color-white);
+  --hero-subtitle: var(--text-light);
+  --hero-badge-bg: var(--white-10);
+  --hero-badge-border: var(--white-20);
 
-  /* ================= CARDAPIO ================= */
-  --cardapio-fundo: var(--cor-creme);
-  --cardapio-card-fundo: var(--cor-branco);
-  --cardapio-card-borda: var(--cor-borda);
-  --cardapio-card-sombra: var(--sombra-padrao);
-  --cardapio-card-sombra-hover: var(--sombra-hover);
-  --cardapio-preco: var(--cor-laranja);
-  --cardapio-tag-fundo: #FEF9F1F2;
-  --cardapio-popular-fundo: var(--gradiente-primario);
+  /* ================= CARDÁPIO ================= */
+  --menu-bg: var(--bg-main);
+  --menu-card-bg: var(--bg-card);
+  --menu-card-border: var(--border-default);
+  --menu-card-shadow: var(--shadow-md);
+  --menu-card-hover: var(--shadow-hover);
+  --menu-price: var(--accent-primary);
+  --menu-tag-bg: #FEF9F1F2;
+  --menu-popular-bg: var(--gradient-primary);
 
   /* ================= DIFERENCIAIS ================= */
-  --diferenciais-fundo: var(--gradiente-diferenciais);
-  --diferenciais-texto: var(--cor-texto);
-  --diferenciais-texto-suave: var(--cor-texto-suave);
-  --diferenciais-card-fundo: var(--cor-branco);
-  --diferenciais-card-borda: var(--cor-borda);
-  --diferenciais-icone: var(--cor-laranja);
+  --features-bg: var(--gradient-soft);
+  --features-card-bg: var(--bg-card);
+  --features-card-border: var(--border-default);
+  --features-icon: var(--accent-primary);
 
   /* ================= DEPOIMENTOS ================= */
-  --depoimentos-fundo: var(--cor-creme);
-  --depoimentos-card-fundo: var(--cor-branco);
-  --depoimentos-card-borda: var(--cor-borda);
-  --depoimentos-card-sombra: var(--sombra-padrao);
-  --depoimentos-estrelas: var(--cor-amarelo);
-  --depoimentos-texto: var(--cor-texto);
-  --depoimentos-meta: var(--cor-texto-suave);
-  --depoimentos-dot-ativo: var(--cor-laranja);
-  --depoimentos-dot-inativo: var(--cor-borda);
+  --testimonials-bg: var(--bg-main);
+  --testimonials-card-bg: var(--bg-card);
+  --testimonials-border: var(--border-default);
+  --testimonials-shadow: var(--shadow-md);
+  --testimonials-stars: var(--accent-secondary);
+  --testimonials-meta: var(--text-secondary);
+
+  --dot-active: var(--accent-primary);
+  --dot-inactive: var(--border-default);
 
   /* ================= SOBRE ================= */
-  --sobre-fundo: #F2EADD66;
-  --sobre-texto: var(--cor-texto);
-  --sobre-texto-suave: var(--cor-texto-suave);
-  --sobre-card-fundo: var(--cor-branco);
-  --sobre-card-borda: var(--cor-borda);
-  --sobre-stat-numero: var(--cor-laranja);
-  --sobre-imagem-glow: var(--gradiente-primario);
+  --about-bg: #F2EADD66;
+  --about-card-bg: var(--bg-card);
+  --about-border: var(--border-default);
+  --about-number: var(--accent-primary);
+  --about-glow: var(--gradient-primary);
 
   /* ================= CONTATO ================= */
-  --contato-fundo: var(--cor-creme);
-  --contato-texto: var(--cor-texto);
-  --contato-texto-suave: var(--cor-texto-suave);
-  --contato-card-fundo: var(--cor-branco);
-  --contato-card-borda: var(--cor-borda);
-  --contato-icone: var(--cor-laranja);
-  --contato-whatsapp: var(--cor-whatsapp);
-  --contato-input-fundo: var(--cor-branco);
-  --contato-input-borda: #E9DCCD;
+  --contact-bg: var(--bg-main);
+  --contact-card-bg: var(--bg-card);
+  --contact-border: var(--border-default);
+  --contact-icon: var(--accent-primary);
+  --contact-input-bg: var(--bg-card);
+  --contact-input-border: #E9DCCD;
+  --contact-whatsapp: var(--accent-success);
 
   /* ================= FOOTER ================= */
-  --footer-fundo: var(--cor-texto);
-  --footer-texto: var(--cor-creme);
-  --footer-texto-suave: #FEF9F199;
-  --footer-borda: var(--branco-fraco);
-  --footer-link-hover: var(--cor-amarelo);
+  --footer-bg: var(--color-dark);
+  --footer-text: var(--color-cream);
+  --footer-text-soft: #FEF9F199;
+  --footer-border: var(--white-10);
+  --footer-hover: var(--accent-secondary);
 
   /* ================= NAVBAR ================= */
-  --navbar-fundo-scroll: #FEF9F1D9;
-  --navbar-borda: var(--cor-borda);
-  --navbar-link: var(--cor-texto);
-  --navbar-link-hover: var(--cor-laranja);
+  --navbar-scroll-bg: #FEF9F1D9;
+  --navbar-border: var(--border-default);
+  --navbar-hover: var(--accent-primary);
 }
 
 .dark {
-  /* ================= CORES BASE ================= */
-  --cor-branco: #FEF8ED;
-  --cor-fundo: #110604;
-  --cor-card: #22110D;
-  --cor-texto: #FEF8ED;
-  --cor-texto-suave: #D0C2AF;
-  --cor-borda: #FFFFFF24;
+  --bg-main: #110604;
+  --bg-card: #22110D;
+  --bg-navbar: #110604;
 
-  /* ================= CORES DE DESTAQUE ================= */
-  --cor-amarelo: #FFCE43;
-  --cor-laranja: #FF932A;
-  --cor-vermelho: #FF5549;
-  --cor-whatsapp: #4BCB71;
+  --text-primary: #FEF8ED;
+  --text-secondary: #D0C2AF;
 
-  /* ================= GRADIENTES ================= */
-  --gradiente-primario: linear-gradient(
+  --border-default: #FFFFFF24;
+
+  --accent-primary: #FF932A;
+  --accent-secondary: #FFCE43;
+  --accent-danger: #FF5549;
+  --accent-success: #4BCB71;
+
+  --gradient-primary: linear-gradient(
     135deg,
     #FFCE43 0%,
     #FF932A 50%,
     #FF5549 100%
   );
 
-  --gradiente-diferenciais: linear-gradient(
+  --gradient-soft: linear-gradient(
     180deg,
     #1D0C08 0%,
     #2D1205 100%
   );
 
-  /* ================= SOMBRAS ================= */
-  --sombra-padrao: #00000026;
-  --sombra-hover: #FF932A59;
+  --shadow-hover: 0 6px 16px #FF932A59;
 
-  /* ================= TRANSPARÊNCIAS ================= */
-  --branco-fraco: #FFFFFF1A;
-  --branco-medio: #FFFFFF33;
+  --hero-title: #FFFFFF;
 
-  /* ================= HERO ================= */
-  --inicio-fundo-overlay: linear-gradient(
-    180deg,
-    #00000066 0%,
-    #000000BF 100%
-  );
+  --menu-tag-bg: #110604F2;
 
-  --inicio-titulo: #FFFFFF;
-  --inicio-subtitulo: #FFFFFFE6;
-  --inicio-badge-fundo: var(--branco-fraco);
-  --inicio-badge-borda: var(--branco-medio);
-  --inicio-destaque: var(--cor-amarelo);
-  --inicio-destaque-gradiente: var(--gradiente-primario);
+  --about-bg: #2C1A1566;
 
-  /* ================= CARDAPIO ================= */
-  --cardapio-fundo: var(--cor-fundo);
-  --cardapio-card-fundo: var(--cor-card);
-  --cardapio-card-borda: var(--cor-borda);
-  --cardapio-card-sombra: var(--sombra-padrao);
-  --cardapio-card-sombra-hover: var(--sombra-hover);
-  --cardapio-preco: var(--cor-laranja);
-  --cardapio-tag-fundo: #110604F2;
-  --cardapio-popular-fundo: var(--gradiente-primario);
+  --contact-input-border: #FFFFFF2E;
 
-  /* ================= DIFERENCIAIS ================= */
-  --diferenciais-fundo: var(--gradiente-diferenciais);
-  --diferenciais-texto: var(--cor-texto);
-  --diferenciais-texto-suave: var(--cor-texto-suave);
-  --diferenciais-card-fundo: var(--cor-card);
-  --diferenciais-card-borda: var(--cor-borda);
-  --diferenciais-icone: var(--cor-laranja);
+  --footer-bg: #080201;
+  --footer-text-soft: #FEF8ED99;
 
-  /* ================= DEPOIMENTOS ================= */
-  --depoimentos-fundo: var(--cor-fundo);
-  --depoimentos-card-fundo: var(--cor-card);
-  --depoimentos-card-borda: var(--cor-borda);
-  --depoimentos-card-sombra: var(--sombra-padrao);
-  --depoimentos-estrelas: var(--cor-amarelo);
-  --depoimentos-texto: var(--cor-texto);
-  --depoimentos-meta: var(--cor-texto-suave);
-  --depoimentos-dot-ativo: var(--cor-laranja);
-  --depoimentos-dot-inativo: var(--cor-borda);
-
-  /* ================= SOBRE ================= */
-  --sobre-fundo: #2C1A1566;
-  --sobre-texto: var(--cor-texto);
-  --sobre-texto-suave: var(--cor-texto-suave);
-  --sobre-card-fundo: var(--cor-card);
-  --sobre-card-borda: var(--cor-borda);
-  --sobre-stat-numero: var(--cor-laranja);
-  --sobre-imagem-glow: var(--gradiente-primario);
-
-  /* ================= CONTATO ================= */
-  --contato-fundo: var(--cor-fundo);
-  --contato-texto: var(--cor-texto);
-  --contato-texto-suave: var(--cor-texto-suave);
-  --contato-card-fundo: var(--cor-card);
-  --contato-card-borda: var(--cor-borda);
-  --contato-icone: var(--cor-laranja);
-  --contato-whatsapp: var(--cor-whatsapp);
-  --contato-input-fundo: var(--cor-card);
-  --contato-input-borda: #FFFFFF2E;
-
-  /* ================= FOOTER ================= */
-  --footer-fundo: #080201;
-  --footer-texto: var(--cor-texto);
-  --footer-texto-suave: #FEF8ED99;
-  --footer-borda: var(--branco-fraco);
-  --footer-link-hover: var(--cor-amarelo);
-
-  /* ================= NAVBAR ================= */
-  --navbar-fundo-scroll: #110604D9;
-  --navbar-borda: var(--cor-borda);
-  --navbar-link: var(--cor-texto);
-  --navbar-link-hover: var(--cor-laranja);
+  --navbar-scroll-bg: #110604D9;
 }
 
 * {
@@ -234,7 +181,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
-  color: var(--cor-branco);
+  color: var(--text-primary);
 }
 
 h1 {
@@ -250,7 +197,7 @@ h3 {
 }
 
 p {
-  font-size: 16px;
+  font-size: 17px;
 }
 
 a {
@@ -264,11 +211,153 @@ i {
 }
 
 .highlight {
-  background: var(--gradiente-primario);
+  background: var(--gradient-primary);
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-weight: 700;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-weight: 700;
+}
+
+/* top-section */
+
+.top-section {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-image: var(--hero-overlay),
+  url("../images/hero-pasteis.jpg");
+  min-height: 100vh;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
 }
 
 /* header */
 
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.header .header-logo p {
+  color: var(--hero-title);
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.header-actions {
+  display: flex;
+  gap: 20px;
+}
+
+.header-actions i {
+  color: var(--hero-title);
+}
+
+/* nav */
+
+.nav {
+  display: none;
+  background-color: var(--bg-navbar);
+  padding: 20px;
+}
+
+.nav-list {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.nav-list .nav-item {
+  font-weight: 500;
+}
+
+.btn-whatsApp .nav-cta {
+  background: var(--gradient-primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 20px;
+  color: var(--bg-navbar);
+  font-weight: 700;
+}
+
+/* hero */
+
+.hero {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+  padding: 25px;
+}
+
+.hero .hero-badge {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  background-color: var(--hero-badge-bg);
+  border: 1px solid var(--hero-badge-border);
+  padding: 5px;
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  font-weight: 400;
+}
+
+.hero .hero-badge i {
+  color: var(--color-yellow);
+}
+
+.hero .hero-badge p {
+  color: var(--color-white);
+}
+
+.hero-content .hero-title {
+  color: var(--hero-title);
+  font-size: 45px;
+}
+
+.hero-content .hero-description {
+  color: var(--hero-subtitle);
+  margin-top: 30px;
+}
+
+.hero-cta {
+  background: var(--gradient-primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  border-radius: 40px;
+  color: var(--bg-navbar);
+  font-weight: 700;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 10px;
+}
+
+.hero-cta i {
+  color: var(--color-white);
+}
+
+.hero-cta p {
+  color: var(--color-white);
+}
+
+/* main */
+
+
+
+/* cardapio/menu */
