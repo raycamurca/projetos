@@ -107,7 +107,6 @@
   --about-card-bg: var(--bg-card);
   --about-border: var(--border-default);
   --about-number: var(--accent-primary);
-  --about-glow: var(--gradient-primary);
 
   /* ================= CONTATO ================= */
   --contact-bg: var(--bg-main);
@@ -225,7 +224,6 @@ section {
 }
 
 .title h2 {
-  font-size: 28px;
   font-weight: 800;
 }
 
@@ -237,7 +235,6 @@ section {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
-  font-size: 35px;
 }
 
 .highlight-title {
@@ -552,26 +549,26 @@ section {
 
 /* sobre */
 
-/* 
-  --about-card-bg: var(--bg-card);
-  --about-border: var(--border-default);
-  --about-number: var(--accent-primary);
-  --about-glow: var(--gradient-primary); */
 
 .about {
   display: flex;
   flex-direction: column;
   gap: 50px;
-  background-color: var(--about-bg);
-}
-
-.about-image {
-
+  background-color: var(--about-card-bg);
 }
 
 .about-image img {
   width: 100%;
   border-radius: 30px;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.title-about .highlight {
+  font-size: 35px;
 }
 
 .title-about p {
@@ -581,4 +578,26 @@ section {
 
 .about-text {
   margin-top: 25px;
+}
+
+.stats {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.stat-card {
+  display: flex;
+  
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid var(--about-border);
+  border-radius: 30px;
+}
+
+.stat-card-value {
+  color: var(--about-number);
 }
