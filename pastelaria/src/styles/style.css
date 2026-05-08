@@ -80,11 +80,10 @@
   --menu-bg: var(--bg-main);
   --menu-card-bg: var(--bg-card);
   --menu-card-border: var(--border-default);
-  --menu-card-shadow: var(--shadow-md);
   --menu-card-hover: var(--shadow-hover);
   --menu-price: var(--accent-primary);
-  --menu-tag-bg: #FEF9F1F2;
-  --menu-popular-bg: var(--gradient-primary);
+  --menu-tag-bg: #FEF9F1F2; /* FALTA USAR */
+  --menu-popular-bg: var(--gradient-primary); /* FALTA USAR */
 
   /* ================= DIFERENCIAIS ================= */
   --features-bg: var(--gradient-soft);
@@ -211,7 +210,13 @@ i {
 }
 
 section {
-  padding: 20px;
+  padding: 80px 20px;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .title p {
@@ -228,9 +233,11 @@ section {
   background: var(--gradient-primary);
   font-family: "Playfair Display", serif;
   font-style: italic;
-  font-weight: 700;
+  -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  color: transparent;
+  font-size: 35px;
 }
 
 .highlight-title {
@@ -249,7 +256,6 @@ section {
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
-  
 }
 
 /* header */
@@ -376,6 +382,7 @@ section {
 
 /* main */
 
+
 /* cardapio/menu */
 
 .menu {
@@ -392,6 +399,10 @@ section {
   align-items: center;
 }
 
+.menu .menu-description  {
+  margin-bottom: 30px;
+}
+
 .menu .menu-description {
   text-align: center;
 }
@@ -406,7 +417,7 @@ section {
   display: flex;
   flex-direction: column;
   background-color: var(--bg-card);
-  border: 1px solid var(--border-default);
+  border: 1px solid var(--menu-card-border);
   border-radius: 20px;
 }
 
@@ -457,6 +468,7 @@ section {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  background: var(--features-bg);
 }
 
 .features-header {
@@ -464,4 +476,109 @@ section {
   flex-direction: column;
   align-items: center;
   text-align: center;
+}
+
+.features-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.feature-card {
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+  padding: 30px;
+  background-color: var(--features-card-bg);
+  border: 1px solid var(--features-card-border);
+  border-radius: 20px;
+}
+
+.feature-card-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  background: var(--features-icon);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.feature-card-icon i {
+  color: var(--color-white);
+}
+
+/* depoimentos */
+
+.testimonials {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  background: var(--testimonials-bg);
+}
+
+.testimonial-card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: var(--testimonials-card-bg);
+  border: 1px solid var(--testimonials-border);
+  box-shadow: 2px 2px 3px 3px var(--testimonials-shadow);
+  padding: 20px;
+  border-radius: 30px;
+}
+
+.testimonial-card-rating {
+  display: flex;
+  gap: 3px;
+}
+
+.testimonial-card-rating i {
+  color: var(--testimonials-stars);
+}
+
+.testimonial-card-text {
+  font-weight: 800;
+}
+
+.testimonial-card-name {
+  font-weight: 700;
+}
+
+.testimonial-card-meta {
+  color: var(--testimonials-meta);
+}
+
+/* sobre */
+
+/* 
+  --about-card-bg: var(--bg-card);
+  --about-border: var(--border-default);
+  --about-number: var(--accent-primary);
+  --about-glow: var(--gradient-primary); */
+
+.about {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  background-color: var(--about-bg);
+}
+
+.about-image {
+
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 30px;
+}
+
+.title-about p {
+  color: var(--color-orange);
+  font-weight: 700;
+}
+
+.about-text {
+  margin-top: 25px;
 }
