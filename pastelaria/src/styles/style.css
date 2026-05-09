@@ -109,10 +109,9 @@
   --about-number: var(--accent-primary);
 
   /* ================= CONTATO ================= */
-  --contact-bg: var(--bg-main);
+  --contact-bg: var(--features-bg);
   --contact-card-bg: var(--bg-card);
   --contact-border: var(--border-default);
-  --contact-icon: var(--accent-primary);
   --contact-input-bg: var(--bg-card);
   --contact-input-border: #E9DCCD;
   --contact-whatsapp: var(--accent-success);
@@ -205,6 +204,7 @@ a {
 }
 
 i {
+  color: var(--color-white);
   font-size: 20px;
 }
 
@@ -583,13 +583,13 @@ section {
 .stats {
   display: flex;
   gap: 20px;
-  justify-content: space-between;
+  justify-content: center;
   text-align: center;
+  flex-wrap: wrap;
 }
 
 .stat-card {
   display: flex;
-  
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -600,4 +600,78 @@ section {
 
 .stat-card-value {
   color: var(--about-number);
+}
+
+/* Contato */
+
+/*
+  --contact-card-bg: var(--bg-card);
+  --contact-icon: var(--accent-primary);
+  --contact-input-bg: var(--bg-card);
+  --contact-input-border: #E9DCCD;
+  */
+
+.contact {
+  background: var(--contact-bg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  gap: 40px;
+}
+
+.contact-header  {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-header p {
+  color: var(--color-yellow);
+  font-weight: 900;
+}
+
+.contact-header h2 {
+  font-weight: 900;
+}
+
+.contact-content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.contact-cta {
+  background: var(--contact-whatsapp);
+  padding: 25px;
+  border-radius: 50px;
+  color: var(--bg-navbar);
+  font-weight: 700;
+  width: fit-content;
+  margin: auto;
+} 
+
+.contact-info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.contact-card {
+  background: var(--contact-card-bg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  gap: 10px;
+  border: 1px solid var(--contact-border);
+  border-radius: 25px;
+}
+
+.contact-card i {
+  color: var(--color-yellow);
+}
+
+.contact-card-value {
+  font-weight: 800;
 }
