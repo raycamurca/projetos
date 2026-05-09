@@ -1,0 +1,81 @@
+/* min-width: 768px */
+
+h1 {
+  font-size: 48px;
+  line-height: 58px;
+}
+
+h2 {
+  font-size: 36px;
+  line-height: 44px;
+}
+
+h3 {
+  font-size: 26px;
+  line-height: 34px;
+}
+
+p {
+  font-size: 17px;
+  line-height: 30px;
+}
+
+a,
+button {
+  font-size: 16px;
+}
+
+i {
+  font-size: 22px;
+}
+
+section {
+  padding: 100px 40px;
+}
+
+.header {
+  padding: 25px 40px;
+}
+
+.hero {
+  padding: 40px;
+  gap: 30px;
+}
+
+.hero-content .hero-title {
+  font-size: 58px;
+  line-height: 66px;
+  max-width: 700px;
+  margin: auto;
+}
+
+.hero-content .hero-description {
+  font-size: 18px;
+  line-height: 32px;
+  max-width: 650px;
+  margin: 30px auto 0 auto;
+}
+
+.hero-cta {
+  padding: 18px 28px;
+  font-size: 17px;
+}
+
+.menu-list,
+.features-list,
+.contact-info-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.about {
+  gap: 70px;
+}
+
+.stats {
+  justify-content: flex-start;
+}
+
+.product-card-image img {
+  height: 260px;
+}

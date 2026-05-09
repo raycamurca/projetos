@@ -112,12 +112,10 @@
   --contact-bg: var(--features-bg);
   --contact-card-bg: var(--bg-card);
   --contact-border: var(--border-default);
-  --contact-input-bg: var(--bg-card);
-  --contact-input-border: #E9DCCD;
   --contact-whatsapp: var(--accent-success);
 
   /* ================= FOOTER ================= */
-  --footer-bg: var(--color-dark);
+  --footer-bg: var(--bg-main);
   --footer-text: var(--color-cream);
   --footer-text-soft: #FEF9F199;
   --footer-border: var(--white-10);
@@ -181,35 +179,108 @@
   color: var(--text-primary);
 }
 
+/* ================= TIPOGRAFIA BASE ================= */
+
 h1 {
-  font-size: 32px;
+  font-size: 36px;
+  line-height: 44px;
+  font-weight: 800;
 }
 
 h2 {
-  font-size: 24px;
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: 800;
 }
 
 h3 {
-  font-size: 20px;
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 700;
 }
 
 p {
-  font-size: 17px;
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 400;
 }
 
 a {
-  font-size: 16px;
   text-decoration: none;
-  color: inherit;
+}
+
+a,
+button {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+}
+
+span {
+  font-size: inherit;
 }
 
 i {
-  color: var(--color-white);
   font-size: 20px;
 }
 
+/* ================= ESPAÇAMENTOS ================= */
+
 section {
   padding: 80px 20px;
+}
+
+.hero {
+  gap: 24px;
+}
+
+.hero-content .hero-title {
+  font-size: 42px;
+  line-height: 50px;
+}
+
+.hero-content .hero-description {
+  font-size: 17px;
+  line-height: 30px;
+}
+
+.hero-cta {
+  padding: 16px 24px;
+}
+
+.hero-cta p {
+  font-weight: 800;
+}
+
+.product-card-content {
+  gap: 14px;
+}
+
+.product-card-price {
+  font-size: 24px;
+}
+
+.product-card-button {
+  font-size: 15px;
+  padding: 14px;
+}
+
+.feature-card {
+  gap: 24px;
+  padding: 30px;
+}
+
+.testimonial-card {
+  gap: 20px;
+  padding: 24px;
+}
+
+.about {
+  gap: 50px;
+}
+
+.contact {
+  gap: 50px;
 }
 
 .title {
@@ -345,7 +416,6 @@ section {
 
 .hero-content .hero-title {
   color: var(--hero-title);
-  font-size: 45px;
 }
 
 .hero-content .hero-description {
@@ -358,7 +428,6 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 15px;
   border-radius: 40px;
   color: var(--bg-navbar);
   font-weight: 700;
@@ -439,7 +508,6 @@ section {
 }
 
 .product-card-price {
-  font-size: 22px;
   font-weight: 700;
   color: var(--accent-primary);
 }
@@ -456,7 +524,6 @@ section {
   border-radius: 20px;
   border: none;
   margin: 0 15px 15px 15px;
-  padding: 10px;
 }
 
 /* diferenciais */
@@ -484,8 +551,6 @@ section {
 .feature-card {
   display: flex;
   flex-direction: column;
-  gap: 23px;
-  padding: 30px;
   background-color: var(--features-card-bg);
   border: 1px solid var(--features-card-border);
   border-radius: 20px;
@@ -518,11 +583,9 @@ section {
 .testimonial-card {
   display: flex;
   flex-direction: column;
-  gap: 20px;
   background-color: var(--testimonials-card-bg);
   border: 1px solid var(--testimonials-border);
   box-shadow: 2px 2px 3px 3px var(--testimonials-shadow);
-  padding: 20px;
   border-radius: 30px;
 }
 
@@ -553,7 +616,6 @@ section {
 .about {
   display: flex;
   flex-direction: column;
-  gap: 50px;
   background-color: var(--about-card-bg);
 }
 
@@ -604,20 +666,12 @@ section {
 
 /* Contato */
 
-/*
-  --contact-card-bg: var(--bg-card);
-  --contact-icon: var(--accent-primary);
-  --contact-input-bg: var(--bg-card);
-  --contact-input-border: #E9DCCD;
-  */
-
 .contact {
   background: var(--contact-bg);
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  gap: 40px;
 }
 
 .contact-header  {
@@ -650,6 +704,10 @@ section {
   margin: auto;
 } 
 
+.contact-cta i {
+  color: var(--color-white);
+}
+
 .contact-info-list {
   display: flex;
   flex-direction: column;
@@ -674,4 +732,17 @@ section {
 
 .contact-card-value {
   font-weight: 800;
+}
+
+/* footer */
+
+  /*
+  --footer-text: var(--color-cream);
+  --footer-text-soft: #FEF9F199;
+  --footer-border: var(--white-10);
+  --footer-hover: var(--accent-secondary); 
+  */
+
+.footer {
+  background-color: var(--footer-bg);
 }

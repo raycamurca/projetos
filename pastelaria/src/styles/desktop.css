@@ -1,0 +1,93 @@
+/* min-width: 1024px */
+
+h1 {
+  font-size: 60px;
+  line-height: 72px;
+}
+
+h2 {
+  font-size: 44px;
+  line-height: 52px;
+}
+
+h3 {
+  font-size: 30px;
+  line-height: 38px;
+}
+
+p {
+  font-size: 18px;
+  line-height: 32px;
+}
+
+a,
+button {
+  font-size: 17px;
+}
+
+i {
+  font-size: 24px;
+}
+
+section {
+  padding: 120px 80px;
+}
+
+.header {
+  padding: 25px 80px;
+}
+
+.hero {
+  padding: 60px 80px;
+}
+
+.hero-content .hero-title {
+  font-size: 72px;
+  line-height: 82px;
+  max-width: 900px;
+}
+
+.hero-content .hero-description {
+  font-size: 20px;
+  line-height: 36px;
+  max-width: 800px;
+}
+
+.hero-cta {
+  padding: 20px 34px;
+  font-size: 18px;
+}
+
+.menu-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.features-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.contact-info-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.about {
+  flex-direction: row;
+  align-items: center;
+  gap: 80px;
+}
+
+.about-image,
+.about-content {
+  flex: 1;
+}
+
+.product-card-image img {
+  height: 280px;
+}
+
+.testimonial-card {
+  padding: 30px;
+}
