@@ -79,3 +79,11 @@ section {
 .product-card-image img {
   height: 260px;
 }
+
+
+
+
+
+.product-card:hover {
+  box-shadow: var(--menu-card-hover);
+}

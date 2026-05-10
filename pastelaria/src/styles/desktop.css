@@ -91,3 +91,12 @@ section {
 .testimonial-card {
   padding: 30px;
 }
+
+
+
+
+
+
+.product-card:hover {
+  box-shadow: var(--menu-card-hover);
+}
