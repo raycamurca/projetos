@@ -9,44 +9,52 @@
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="src/styles/style.css">
+    <link rel="stylesheet" href="src/styles/tablet.css" media="screen and (min-width: 768px)">
+    <link rel="stylesheet" href="src/styles/desktop.css" media="screen and (min-width: 1024px)">
 </head>
 
-<body class="dark">
+<body>
     <div class="top-section">
         <header class="header">
             <div class="header-logo">
-                <p>🥟 Sabor do <span class="highlight">Pastel</span></p>
+                <p>🥟</p>
+                <p>Sabor do <span class="highlight">Pastel</span></p>
             </div>
+
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#cardapio">Cardápio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#diferenciais">Diferenciais</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#depoimentos">Depoimentos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sobre">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contato">Contato</a>
+                    </li>
+                    <li class="nav-item btn-whatsApp">
+                        <a class="nav-cta" href="https://wa.me/55SEUNUMERO">
+                            Pedir no WhatsApp
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
             <div class="header-actions">
-                <i class="fa-regular fa-moon"></i>
-                <i class="fa-solid fa-bars"></i>
+                <div class="icon-theme">
+                    <i class="fa-regular fa-moon"></i>
+                </div>
+                <div class="icon-menu">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
             </div>
         </header>
-
-        <nav class="nav">
-            <ul class="nav-list">
-                <li class="nav-item">
-                    <a class="nav-link" href="#cardapio">Cardápio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#diferenciais">Diferenciais</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#depoimentos">Depoimentos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#sobre">Sobre</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#contato">Contato</a>
-                </li>
-                <li class="nav-item btn-whatsApp">
-                    <a class="nav-cta" href="https://wa.me/55SEUNUMERO">
-                        Pedir no WhatsApp
-                    </a>
-                </li>
-            </ul>
-        </nav>
 
         <section id="inicio" class="hero">
             <div class="hero-badge">
@@ -71,7 +79,7 @@
         <section id="cardapio" class="menu">
             <div class="menu-header title">
                 <p>NOSSO CARDÁPIO</p>
-                <h2>Sabores que <span class="highlight-title">conquistam</span></h2>
+                <h2>Sabores que conquistam</h2>
             </div>
 
             <div class="menu-description">
@@ -114,6 +122,114 @@
 
                     <button class="product-card-button">Pedir este sabor</button>
                 </div>
+
+                <div class="product-card">
+                    <div class="product-card-image">
+                        <img src="src/images/pastel-frango.jpg" alt="Pastel de Frango com Catupiry">
+                    </div>
+
+                    <div class="product-card-content">
+                        <div class="product-card-header">
+                            <h3 class="product-card-title">Frango com Catupiry</h3>
+                            <p class="product-card-price">R$ 12</p>
+                        </div>
+                        <p class="product-card-description">
+                            Frango desfiado cremoso com o legítimo Catupiry.
+                        </p>
+                    </div>
+
+                    <button class="product-card-button">Pedir este sabor</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-card-image">
+                        <img src="src/images/pastel-camarao.jpg" alt="Pastel de Camarão">
+                    </div>
+
+                    <div class="product-card-content">
+                        <div class="product-card-header">
+                            <h3 class="product-card-title">Camarão</h3>
+                            <p class="product-card-price">R$ 22</p>
+                        </div>
+                        <p class="product-card-description">
+                            Camarão suculento com o toque do alho dourado.
+                        </p>
+                    </div>
+
+                    <button class="product-card-button">Pedir este sabor</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-card-image">
+                        <img src="src/images/pastel-chocolate.jpg" alt="Pastel Chocolate com banana">
+                    </div>
+
+                    <div class="product-card-content">
+                        <div class="product-card-header">
+                            <h3 class="product-card-title">Chocolate com Banana</h3>
+                            <p class="product-card-price">R$ 14</p>
+                        </div>
+                        <p class="product-card-description">
+                            Chocolate ao leite, banana e canela.
+                        </p>
+                    </div>
+
+                    <button class="product-card-button">Pedir este sabor</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-card-image">
+                        <img src="src/images/pastel-romeu.jpg" alt="Pastel Romeu e Julieta">
+                    </div>
+
+                    <div class="product-card-content">
+                        <div class="product-card-header">
+                            <h3 class="product-card-title">Romeu e Julieta</h3>
+                            <p class="product-card-price">R$ 14</p>
+                        </div>
+                        <p class="product-card-description">
+                            Goiabada cremosa e queijo branco. O clássico mineiro.
+                        </p>
+                    </div>
+
+                    <button class="product-card-button">Pedir este sabor</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-card-image">
+                        <img src="src/images/pastel-carneseca.jpg" alt="Carne Seca com Catupiry">
+                    </div>
+
+                    <div class="product-card-content">
+                        <div class="product-card-header">
+                            <h3 class="product-card-title">Carne Seca com Catupiry</h3>
+                            <p class="product-card-price">R$ 19</p>
+                        </div>
+                        <p class="product-card-description">
+                            Carne seca desfiada à mão e Catupiry cremoso.
+                        </p>
+                    </div>
+
+                    <button class="product-card-button">Pedir este sabor</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-card-image">
+                        <img src="src/images/prestigio.png" alt="Pastel Prestígio">
+                    </div>
+
+                    <div class="product-card-content">
+                        <div class="product-card-header">
+                            <h3 class="product-card-title">Prestígio</h3>
+                            <p class="product-card-price">R$ 17</p>
+                        </div>
+                        <p class="product-card-description">
+                            Coco ralado cremoso com cobertura de chocolate ao leite derretido.
+                        </p>
+                    </div>
+
+                    <button class="product-card-button">Pedir este sabor</button>
+                </div>
             </div>
         </section>
 
@@ -121,8 +237,8 @@
             <div class="features-header title">
                 <p>POR QUE SOMOS ESPECIAIS</p>
                 <h2>
-                    Feito com carinho,  
-                    <span class="highlight-title">servido com orgulho</span>
+                    <span>Feito com carinho,</span>
+                    <span>servido com orgulho</span>
                 </h2>
             </div>
 
@@ -198,8 +314,8 @@
 
             <div class="stats">
                 <div class="stat-card">
-                    <h3 class="stat-card-value">+10</h3>
-                    <p class="stat-card-label">Sabores</p>
+                    <h3 class="stat-card-value">+40</h3>
+                    <p class="stat-card-label">Anos</p>
                 </div>
                 <div class="stat-card">
                     <h3 class="stat-card-value">50K</h3>
@@ -250,30 +366,30 @@
     </main>
 
     <footer class="footer">
-        <div class="footer-logo">
-            <p>🥟</p>
-            <h3>Sabor do <span class="highlight">Pastel</span></h3>
-        </div>
-
-        <p class="footer-description">
-            O sabor caseiro do pastel artesanal, na sua mesa em até 30 minutos.
-        </p>
-
-        <div class="footer-section">
-            <h3>Horário</h3>
-            <p>
-                Terça a Domingo | 11h às 23h <br>
-                Segunda | Fechado
-            </p>
-        </div>
-
-
-        <div class="footer-section">
-            <h3>Contato</h3>
-            <p>
-                (11) 99999-9999 <br>
-                Rua Kame House - 777
-            </p>
+        <div class="group-footer">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <p class="icon-pastel">🥟</p>
+                    <h3>Sabor do <span class="highlight">Pastel</span></h3>
+                </div>
+                <p class="footer-description">
+                    O sabor caseiro do pastel artesanal, na sua mesa em até 30 minutos.
+                </p>
+            </div>
+            <div class="footer-section">
+                <h3>Horário</h3>
+                <p>
+                    Terça a Domingo | 11h às 23h <br>
+                    Segunda | Fechado
+                </p>
+            </div>
+            <div class="footer-section">
+                <h3>Contato</h3>
+                <p>
+                    (11) 99999-9999 <br>
+                    Rua Kame House - 777
+                </p>
+            </div>
         </div>
 
         <div class="footer-social">

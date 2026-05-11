@@ -404,7 +404,7 @@ p {
 
 a {
   text-decoration: none;
-  color: var(--texto-principal);
+  color: #FFFFFF;
 }
 
 a,
@@ -486,6 +486,7 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
   gap: 10px;
 }
 
@@ -508,7 +509,7 @@ section {
   color: transparent;
 }
 
-.highlight-title {
+h2 span {
   display: block;
 }
 
@@ -535,16 +536,22 @@ section {
   padding: 20px;
 }
 
+.header .header-logo {
+  display: flex;
+  gap: 10px;
+}
+
 .header .header-logo p {
   color: var(--inicio-titulo);
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 700;
 }
 
 .header-actions {
   display: flex;
   gap: 20px;
 }
+
 
 .header-actions i {
   color: var(--inicio-titulo);
@@ -708,6 +715,7 @@ section {
 }
 
 .product-card-price {
+  white-space: nowrap;
   font-weight: 700;
   color: var(--cardapio-preco);
 }
@@ -853,7 +861,6 @@ section {
   display: flex;
   gap: 20px;
   justify-content: center;
-  text-align: center;
   flex-wrap: wrap;
 }
 
@@ -954,6 +961,18 @@ section {
   gap: 20px;
   background: var(--footer-fundo);
   padding: 50px 20px 10px 20px;
+}
+
+.group-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.footer-top {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .footer-logo {
