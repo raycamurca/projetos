@@ -345,6 +345,11 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  width: 100%;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
   color: var(--texto-principal);
@@ -373,31 +378,31 @@ button {
 
 h1 {
   font-family: "Playfair Display", serif;
-  font-size: 36px;
-  line-height: 44px;
+  font-size: clamp(36px, 5vw, 60px);
+  line-height: 1.2;
   font-weight: 800;
   color: var(--texto-principal);
 }
 
 h2 {
   font-family: "Playfair Display", serif;
-  font-size: 28px;
-  line-height: 36px;
+  font-size: clamp(28px, 4vw, 44px);
+  line-height: 1.2;
   font-weight: 800;
   color: var(--texto-principal);
 }
 
 h3 {
   font-family: "Playfair Display", serif;
-  font-size: 22px;
-  line-height: 30px;
+  font-size: clamp(22px, 3vw, 30px);
+  line-height: 1.3;
   font-weight: 700;
   color: var(--texto-principal);
 }
 
 p {
-  font-size: 16px;
-  line-height: 28px;
+  font-size: clamp(16px, 2vw, 20px);
+  line-height: 1.7;
   font-weight: 500;
   color: var(--texto-principal);
 }
@@ -409,8 +414,8 @@ a {
 
 a,
 button {
-  font-size: 16px;
-  line-height: 24px;
+  font-size: clamp(16px, 2vw, 18px);
+  line-height: 1.5;
   font-weight: 600;
 }
 
@@ -420,7 +425,7 @@ span {
 }
 
 i {
-  font-size: 20px;
+  font-size: clamp(20px, 2.5vw, 24px);
 }
 
 /* ================= ESPAÇAMENTOS ================= */
@@ -429,38 +434,24 @@ section {
   padding: 80px 20px;
 }
 
+/* section, main {
+  max-width: 1200px;
+  margin: auto;
+} */
+
 .hero {
   gap: 24px;
-}
-
-.hero-content .hero-title {
-  font-size: 42px;
-  line-height: 50px;
-}
-
-.hero-content .hero-description {
-  font-size: 17px;
-  line-height: 30px;
 }
 
 .hero-cta {
   padding: 16px 24px;
 }
 
-.hero-cta p {
-  font-weight: 800;
-}
-
 .product-card-content {
   gap: 14px;
 }
 
-.product-card-price {
-  font-size: 24px;
-}
-
 .product-card-button {
-  font-size: 15px;
   padding: 14px;
 }
 
@@ -491,13 +482,7 @@ section {
 }
 
 .title p {
-  font-weight: 600;
   color: var(--texto-acento);
-}
-
-.title h2 {
-  font-size: 35px;
-  font-weight: 900;
 }
 
 .highlight {
@@ -511,6 +496,10 @@ section {
 
 h2 span {
   display: block;
+}
+
+.one-p {
+  font-weight: 600;
 }
 
 /* top-section */
@@ -536,6 +525,10 @@ h2 span {
   padding: 20px;
 }
 
+.header-logo p {
+  font-weight: 700;
+}
+
 .header .header-logo {
   display: flex;
   gap: 10px;
@@ -543,8 +536,6 @@ h2 span {
 
 .header .header-logo p {
   color: var(--inicio-titulo);
-  font-size: 20px;
-  font-weight: 700;
 }
 
 .header-actions {
@@ -572,10 +563,6 @@ h2 span {
   gap: 25px;
 }
 
-.nav-list .nav-item {
-  font-weight: 500;
-}
-
 .btn-whatsApp .nav-cta {
   background: var(--botao-primario-fundo);
   display: flex;
@@ -584,7 +571,6 @@ h2 span {
   padding: 10px;
   border-radius: 20px;
   color: var(--botao-primario-texto);
-  font-weight: 700;
 }
 
 /* hero */
@@ -610,7 +596,6 @@ h2 span {
   padding: 5px;
   border-radius: 20px;
   backdrop-filter: blur(15px);
-  font-weight: 400;
 }
 
 .hero .hero-badge i {
@@ -637,7 +622,6 @@ h2 span {
   align-items: center;
   border-radius: 40px;
   color: var(--botao-primario-texto);
-  font-weight: 700;
 }
 
 .hero-cta {
@@ -716,8 +700,8 @@ h2 span {
 
 .product-card-price {
   white-space: nowrap;
-  font-weight: 700;
   color: var(--cardapio-preco);
+  font-weight: 900;
 }
 
 .product-card-description {
@@ -725,7 +709,6 @@ h2 span {
 }
 
 .product-card-button {
-  font-weight: 800;
   color: var(--botao-default-texto);
   background: var(--botao-default-fundo);
   border-radius: 20px;
@@ -780,6 +763,12 @@ h2 span {
   color: var(--texto-sobre-escuro);
 }
 
+.feature-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
 /* depoimentos */
 
 .testimonials {
@@ -805,14 +794,6 @@ h2 span {
 
 .testimonial-card-rating i {
   color: var(--depoimentos-estrelas);
-}
-
-.testimonial-card-text {
-  font-weight: 800;
-}
-
-.testimonial-card-name {
-  font-weight: 700;
 }
 
 .testimonial-card-meta {
@@ -844,13 +825,8 @@ h2 span {
   gap: 10px;
 }
 
-.title-about .highlight {
-  font-size: 35px;
-}
-
 .title-about p {
   color: var(--texto-acento);
-  font-weight: 700;
 }
 
 .about-text {
@@ -898,12 +874,6 @@ h2 span {
 
 .contact-header p {
   color: var(--inicio-destaque);
-  font-weight: 900;
-}
-
-.contact-header h2 {
-  font-size: 35px;
-  font-weight: 900;
 }
 
 .contact-content {
@@ -917,7 +887,6 @@ h2 span {
   color: var(--botao-whatsapp-texto);
   padding: 25px;
   border-radius: 50px;
-  font-weight: 700;
   width: fit-content;
   margin: auto;
 }
@@ -949,15 +918,12 @@ h2 span {
   color: var(--contato-icone);
 }
 
-.contact-card-value {
-  font-weight: 800;
-}
-
 /* footer */
 
 .footer {
   display: flex;
   flex-direction: column;
+  text-align: center;
   gap: 20px;
   background: var(--footer-fundo);
   padding: 50px 20px 10px 20px;
@@ -978,11 +944,6 @@ h2 span {
 .footer-logo {
   display: flex;
   gap: 10px;
-}
-
-.footer-logo p {
-  font-size: 22px;
-  font-weight: 800;
 }
 
 .footer-section {
