@@ -190,7 +190,9 @@
   );
 
   /* ================= CARDAPIO ================= */
-  --cardapio-fundo: #110604;
+  /* --cardapio-fundo: #110604; */
+
+  --cardapio-fundo: #18120D;
   --cardapio-card-fundo: #22110D;
   --cardapio-card-borda: #FFFFFF24;
   --cardapio-card-sombra: #00000026;
@@ -205,11 +207,19 @@
   );
 
   /* ================= DIFERENCIAIS ================= */
-  --diferenciais-fundo: linear-gradient(
+
+  /* --diferenciais-fundo: linear-gradient(
     180deg,
     #1D0C08 0%,
     #2D1205 100%
+  ); */
+
+  --diferenciais-fundo: linear-gradient(
+    180deg,
+    #241A12 0%,
+    #140E09 100%
   );
+
   --diferenciais-texto: #FEF8ED;
   --diferenciais-texto-suave: #D0C2AF;
   --diferenciais-card-fundo: #22110D;
@@ -217,7 +227,11 @@
   --diferenciais-icone: #FF932A;
 
   /* ================= DEPOIMENTOS ================= */
-  --depoimentos-fundo: #110604;
+
+  /* --depoimentos-fundo: #110604; */
+
+  --depoimentos-fundo: #18120D;
+
   --depoimentos-card-fundo: #22110D;
   --depoimentos-card-borda: #FFFFFF24;
   --depoimentos-card-sombra: #00000026;
@@ -228,7 +242,7 @@
   --depoimentos-dot-inativo: #FFFFFF24;
 
   /* ================= SOBRE ================= */
-  --sobre-fundo: #2C1A1566;
+  --sobre-fundo: #0A0002;
   --sobre-texto: #FEF8ED;
   --sobre-texto-suave: #D0C2AF;
   --sobre-card-fundo: #22110D;
@@ -242,7 +256,7 @@
   );
 
   /* ================= CONTATO ================= */
-  --contato-fundo: #110604;
+  --contato-fundo: #18120D;
   --contato-texto: #FEF8ED;
   --contato-texto-suave: #D0C2AF;
   --contato-card-fundo: #22110D;
@@ -253,7 +267,13 @@
   --contato-input-borda: #FFFFFF2E;
 
   /* ================= FOOTER ================= */
-  --footer-fundo: #080201;
+  --footer-fundo: linear-gradient(
+    180deg,
+    #1F1710 0%,
+    #120D08 100%
+  );
+
+
   --footer-texto: #FEF8ED;
   --footer-texto-suave: #FEF8ED99;
   --footer-borda: #FFFFFF1A;
@@ -576,7 +596,6 @@ h2 span {
   text-align: center;
   gap: 20px;
   padding: 25px;
-  margin-top: 80px;
 }
 
 .hero .hero-badge {
@@ -616,6 +635,7 @@ h2 span {
   gap: 10px;
   border-radius: 40px;
   color: var(--botao-primario-texto);
+  padding: 20px 34px;
 }
 
 .hero-cta i,
