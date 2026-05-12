@@ -1,7 +1,6 @@
 # projetos
  Coleção de projetos práticos desenvolvidos para estudar e aprimorar habilidades em programação.
 
-
  <a href="https://raycamurca.github.io/projetos/anime" target="_blank" rel="external">Projeto 01 - anime</a>
  <br>
  <a href="https://raycamurca.github.io/projetos/login" target="_blank" rel="external">Projeto 02 - login</a>
