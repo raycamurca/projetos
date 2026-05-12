@@ -26,7 +26,7 @@
   --cardapio-fundo: #FEF9F1;
   --cardapio-card-fundo: #FFFFFF;
   --cardapio-card-borda: #DECEBC;
-  --cardapio-card-sombra: #00000026;
+  --cardapio-card-sombra: #00000026;  
   --cardapio-card-sombra-hover: #E34D0059;
   --cardapio-preco: #E34D00;
   --cardapio-tag-fundo: #FEF9F1F2;
@@ -337,8 +337,6 @@
   --divisor: #FFFFFF24;
 }
 
-
-
 * {
   margin: 0;
   padding: 0;
@@ -353,7 +351,15 @@ body {
 body {
   font-family: "Montserrat", sans-serif;
   color: var(--texto-principal);
-  background: var(--fundo-principal);
+  background: transparent;
+}
+
+.conteiner, .conteiner-about {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin: 0 auto;
+  max-width: 1280px;
 }
 
 /* ================= TIPOGRAFIA BASE ================= */
@@ -434,24 +440,12 @@ section {
   padding: 80px 20px;
 }
 
-/* section, main {
-  max-width: 1200px;
-  margin: auto;
-} */
-
-.hero {
-  gap: 24px;
-}
-
-.hero-cta {
-  padding: 16px 24px;
-}
-
 .product-card-content {
   gap: 14px;
 }
 
 .product-card-button {
+  font-weight: 900;
   padding: 14px;
 }
 
@@ -461,6 +455,8 @@ section {
 }
 
 .testimonial-card {
+  max-width: 900px;
+  margin: auto;
   gap: 20px;
   padding: 24px;
 }
@@ -505,13 +501,10 @@ h2 span {
 /* top-section */
 
 .top-section {
-  display: flex;
-  flex-direction: column;
   min-height: 100vh;
   background-image: var(--inicio-fundo-overlay),
   url("../images/hero-pasteis.jpg");
-  min-height: 100vh;
-  background-position: center top;
+  background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -519,6 +512,7 @@ h2 span {
 /* header */
 
 .header {
+  background: transparent;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -576,14 +570,13 @@ h2 span {
 /* hero */
 
 .hero {
-  flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   text-align: center;
   gap: 20px;
   padding: 25px;
+  margin-top: 80px;
 }
 
 .hero .hero-badge {
@@ -620,18 +613,15 @@ h2 span {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 10px;
   border-radius: 40px;
   color: var(--botao-primario-texto);
-}
-
-.hero-cta {
-  display: flex;
-  gap: 10px;
 }
 
 .hero-cta i,
 .hero-cta p {
   color: var(--botao-primario-texto);
+  font-weight: 700;
 }
 
 
@@ -641,9 +631,6 @@ h2 span {
 /* cardapio/menu */
 
 .menu {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
   background: var(--cardapio-fundo);
 }
 
@@ -719,9 +706,6 @@ h2 span {
 /* diferenciais */
 
 .features {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
   background: var(--diferenciais-fundo);
 }
 
@@ -736,7 +720,7 @@ h2 span {
 .features-list {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 40px;
 }
 
 .feature-card {
@@ -772,9 +756,6 @@ h2 span {
 /* depoimentos */
 
 .testimonials {
-  display: flex;
-  flex-direction: column;
-  gap: 50px;
   background: var(--depoimentos-fundo);
 }
 
@@ -853,6 +834,7 @@ h2 span {
 }
 
 .stat-card-value {
+  font-weight: 900;
   color: var(--sobre-stat-numero);
 }
 
@@ -923,7 +905,6 @@ h2 span {
 .footer {
   display: flex;
   flex-direction: column;
-  text-align: center;
   gap: 20px;
   background: var(--footer-fundo);
   padding: 50px 20px 10px 20px;
@@ -944,6 +925,10 @@ h2 span {
 .footer-logo {
   display: flex;
   gap: 10px;
+}
+
+.footer-description {
+  text-align: start;
 }
 
 .footer-section {

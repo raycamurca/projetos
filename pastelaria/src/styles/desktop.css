@@ -6,9 +6,6 @@ section {
   padding: 25px 80px;
 }
 
-.hero {
-  padding: 60px 80px;
-}
 
 .hero-content .hero-title {
   max-width: 900px;
@@ -16,10 +13,6 @@ section {
 
 .hero-content .hero-description {
   max-width: 800px;
-}
-
-.hero-cta {
-  padding: 20px 34px;
 }
 
 .menu-list {
@@ -37,29 +30,42 @@ section {
   grid-template-columns: repeat(3, 1fr);
 }
 
-.about {
-  flex-direction: row;
+/* About */
+
+.conteiner-about {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   align-items: center;
-  gap: 80px;
+  gap: 70px;
 }
 
-.about-image,
-.about-content {
-  flex: 1;
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column: 1/-1;
+}
+
+.product-card {
+  transition: all 0.4s;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--menu-card-hover);
 }
 
 .product-card-image img {
   height: 280px;
+  transition: transform 0.4s ease;
+}
+
+.product-card:hover .product-card-image img {
+  transform: scale(1.08);
 }
 
 .testimonial-card {
   padding: 30px;
 }
-
-.product-card:hover {
-  box-shadow: var(--menu-card-hover);
-}
-
 
 .icon-theme {
   width: 50px;
@@ -73,4 +79,80 @@ section {
 .icon-theme:hover {
   background-color: var(--footer-borda);
   border-radius: 50%;
+}
+
+
+.footer {
+  text-align: center;
+}
+
+/* animação section diferenciais */
+
+.feature-card {
+  transition: all .4s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-20px);
+}
+
+.feature-card-icon {
+  transition: all .4s ease;
+}
+
+.feature-card:hover .feature-card-icon {
+  transform: translate3d(5px, 5px, 5px)
+} 
+
+.feature-card:hover .feature-card-title {
+  color: var(--diferenciais-icone);
+}
+
+/* btn contato */
+
+.contact-cta {
+  transition: all 0.3s ease;
+}
+
+.contact-cta:hover {
+  transform: scale(1.05);
+
+  box-shadow: 
+  0 10px 25px var(--cardapio-card-sombra),
+  0 0 20px var(--cardapio-card-sombra-hover);
+}
+
+/* btn contato hero */
+
+.hero-cta {
+  padding: 20px 34px;
+  transition: all 0.3s ease;
+}
+
+.hero-cta:hover {
+  transform: scale(1.05);
+
+  box-shadow: 
+  0 10px 25px var(--cardapio-card-sombra),
+  0 0 20px var(--cardapio-card-sombra-hover);
+}
+
+/* card contato */
+
+.contact-card {
+  transition: all 0.5s;
+}
+
+.contact-card:hover {
+  transform: translateY(-10px);
+}
+
+/* icon social footer */
+
+.icon-social {
+  transition: all 0.5s;
+}
+
+.icon-social:hover {
+  transform: translateY(-10px);
 }

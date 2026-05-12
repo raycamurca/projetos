@@ -31,6 +31,20 @@ section {
 
 .product-card-image img {
   height: 260px;
+  transition: transform 0.4s ease;
+}
+
+.product-card {
+  transition: all 0.4s;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--menu-card-hover);
+}
+
+.product-card:hover .product-card-image img {
+  transform: scale(1.08);
 }
 
 /* top section */
@@ -45,11 +59,6 @@ section {
   display: flex;
   align-items: center;
   gap: 10px;
-}
-
-.icon-theme {
-  cursor: pointer;
-  margin-left: 20px;
 }
 
 .icon-menu {
@@ -83,6 +92,8 @@ section {
   justify-content: center;
   align-items: center;
   transition: all .5s;
+  cursor: pointer;
+  margin-left: 20px;
 }
 
 .icon-theme:hover {
@@ -106,10 +117,91 @@ section {
   gap: 30px;
 }
 
-.icon-pastel {
-  display: none;
-}
-
 .footer-social {
   margin: auto;
+}
+
+/* animação section diferenciais */
+
+.feature-card {
+  transition: all .4s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-20px);
+}
+
+.feature-card-icon {
+  transition: all .4s ease;
+}
+
+.feature-card:hover .feature-card-icon {
+  transform: translate3d(5px, 5px, 5px)
+} 
+
+.feature-card:hover .feature-card-title {
+  color: var(--diferenciais-icone);
+}
+
+
+/* About */
+
+.conteiner-about {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column: 1/-1;
+}
+
+/* btn contato */
+
+.contact-cta {
+  transition: all 0.3s ease;
+}
+
+.contact-cta:hover {
+  transform: scale(1.05);
+
+  box-shadow: 
+  0 10px 25px var(--cardapio-card-sombra),
+  0 0 20px var(--cardapio-card-sombra-hover);
+}
+
+/* btn contato hero */
+
+.hero-cta {
+  padding: 20px 34px;
+  transition: all 0.3s ease;
+}
+
+.hero-cta:hover {
+  transform: scale(1.05);
+
+  box-shadow: 
+  0 10px 25px var(--cardapio-card-sombra),
+  0 0 20px var(--cardapio-card-sombra-hover);
+}
+
+/* card contato */
+
+.contact-card {
+  transition: all 0.5s;
+}
+
+.contact-card:hover {
+  transform: translateY(-10px);
+}
+
+/* icon social footer */
+
+.icon-social {
+  transition: all 0.5s;
+}
+
+.icon-social:hover {
+  transform: translateY(-10px);
 }
