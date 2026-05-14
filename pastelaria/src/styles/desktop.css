@@ -151,3 +151,20 @@ section {
 #theme:hover {
   background: var(--footer-borda);
 }
+
+.nav {
+  display: block;
+  padding: 20px;
+}
+
+.nav-list {
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+  list-style-type: none;
+}
+
+.nav-item a {
+  color: #FFFFFF;
+  font-weight: 500;
+}

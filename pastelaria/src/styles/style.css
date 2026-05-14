@@ -97,7 +97,7 @@
   --footer-link-hover: #EDAA00;
 
   /* ================= NAVBAR ================= */
-  --navbar-fundo-scroll: #FEF9F1D9;
+  --navbar-fundo-scroll: #FFFFFF;
   --navbar-borda: #DECEBC;
   --navbar-link: #200A05;
   --navbar-link-hover: #E34D00;
@@ -208,12 +208,6 @@
 
   /* ================= DIFERENCIAIS ================= */
 
-  /* --diferenciais-fundo: linear-gradient(
-    180deg,
-    #1D0C08 0%,
-    #2D1205 100%
-  ); */
-
   --diferenciais-fundo: linear-gradient(
     180deg,
     #241A12 0%,
@@ -280,7 +274,7 @@
   --footer-link-hover: #FFCE43;
 
   /* ================= NAVBAR ================= */
-  --navbar-fundo-scroll: #110604D9;
+  --navbar-fundo-scroll: #000000;
   --navbar-borda: #FFFFFF24;
   --navbar-link: #FEF8ED;
   --navbar-link-hover: #FF932A;
@@ -544,7 +538,7 @@ h2 span {
 
 .header {
   width: 100%;
-  max-height: 110px;
+  max-height: clamp(80px, 10vw, 110px);
   background: rgba(0, 0, 0, 0.35);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
@@ -589,15 +583,31 @@ h2 span {
 
 .nav {
   display: none;
+}
+
+.nav.ativo {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 100%;
+  padding: 25px;
   background: var(--navbar-fundo-scroll);
-  padding: 20px;
 }
 
 .nav-list {
-  list-style-type: none;
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  justify-content: center;
+  gap: 30px;
+  list-style-type: none;
+}
+
+.nav-item a {
+  color: var(--navbar-link);
+  font-size: clamp(20px, 5vw, 25px);
+  font-weight: 500;
 }
 
 .btn-whatsApp .nav-cta {
