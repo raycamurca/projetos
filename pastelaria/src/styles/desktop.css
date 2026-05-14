@@ -62,20 +62,6 @@ section {
   padding: 30px;
 }
 
-.icon-theme {
-  width: 50px;
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: all .5s;
-}
-
-.icon-theme:hover {
-  background-color: var(--footer-borda);
-  border-radius: 50%;
-}
-
 
 .footer {
   text-align: center;
@@ -150,4 +136,18 @@ section {
 
 .icon-social:hover {
   transform: translateY(-10px);
+}
+
+#theme {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  transition: all .4s;
+}
+
+#theme:hover {
+  background: var(--footer-borda);
 }

@@ -81,22 +81,6 @@ section {
   display: none;
 }
 
-.icon-theme {
-  width: 50px;
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: all .5s;
-  cursor: pointer;
-  margin-left: 20px;
-}
-
-.icon-theme:hover {
-  background-color: var(--footer-borda);
-  border-radius: 50%;
-}
-
 .menu-list, .features-list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -200,4 +184,18 @@ section {
 
 .icon-social:hover {
   transform: translateY(-10px);
+}
+
+#theme {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  transition: all .4s;
+}
+
+#theme:hover {
+  background: var(--footer-borda);
 }
