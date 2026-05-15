@@ -35,13 +35,6 @@
   --cardapio-card-sombra: #00000026;  
   --cardapio-card-sombra-hover: #E34D0059;
   --cardapio-preco: #E34D00;
-  --cardapio-tag-fundo: #FEF9F1F2;
-  --cardapio-popular-fundo: linear-gradient(
-    135deg,
-    #EDAA00 0%,
-    #E34D00 50%,
-    #D40E14 100%
-  );
 
   /* ================= DIFERENCIAIS ================= */
   --diferenciais-fundo: linear-gradient(
@@ -49,19 +42,15 @@
     #FFF7EA 0%,
     #FFE7CE 100%
   );
-  --diferenciais-texto: #200A05;
-  --diferenciais-texto-suave: #553B32;
   --diferenciais-card-fundo: #FFFFFF;
   --diferenciais-card-borda: #DECEBC;
   --diferenciais-icone: #E34D00;
 
   /* ================= DEPOIMENTOS ================= */
   --depoimentos-fundo: #FEF9F1;
-  --depoimentos-card-fundo: #FFFFFF;
   --depoimentos-card-borda: #DECEBC;
   --depoimentos-card-sombra: #00000026;
   --depoimentos-estrelas: #EDAA00;
-  --depoimentos-texto: #200A05;
   --depoimentos-meta: #553B32;
   --depoimentos-dot-ativo: #E34D00;
   --depoimentos-dot-inativo: #DECEBC;
@@ -69,7 +58,6 @@
   /* ================= SOBRE ================= */
   --sobre-fundo: #F2EADD66;
   --sobre-texto: #200A05;
-  --sobre-texto-suave: #553B32;
   --sobre-card-fundo: #FFFFFF;
   --sobre-card-borda: #DECEBC;
   --sobre-stat-numero: #E34D00;
@@ -82,14 +70,10 @@
 
   /* ================= CONTATO ================= */
   --contato-fundo: #FEF9F1;
-  --contato-texto: #200A05;
-  --contato-texto-suave: #553B32;
   --contato-card-fundo: #FFFFFF;
   --contato-card-borda: #DECEBC;
   --contato-icone: #E34D00;
   --contato-whatsapp: #03A14A;
-  --contato-input-fundo: #FFFFFF;
-  --contato-input-borda: #E9DCCD;
 
   /* ================= FOOTER ================= */
   --footer-fundo: linear-gradient(
@@ -97,16 +81,11 @@
     #FFF7EA 0%,
     #FFE7CE 100%
   );
-  --footer-texto: #FEF9F1;
-  --footer-texto-suave: #FEF9F199;
   --footer-borda: #8080803e;
-  --footer-link-hover: #EDAA00;
 
   /* ================= NAVBAR ================= */
   --navbar-fundo-scroll: #FFFFFF;
-  --navbar-borda: #DECEBC;
   --navbar-link: #200A05;
-  --navbar-link-hover: #E34D00;
 
   /* ================= BOTÕES ================= */
   --botao-primario-fundo: linear-gradient(
@@ -115,65 +94,20 @@
     #E34D00 50%,
     #D40E14 100%
   );
-  --botao-primario-hover: linear-gradient(
-    135deg,
-    #EDAA00 0%,
-    #E34D00 50%,
-    #D40E14 100%
-  );
-  --botao-primario-active: #E34D00;
   --botao-primario-texto: #FFFFFF;
   --botao-primario-sombra: #E34D0059;
-  --botao-primario-sombra-hover: #EDAA0066;
-
   --botao-secundario-fundo: #200A05;
-  --botao-secundario-texto: #FEF9F1;
-  --botao-secundario-hover-fundo: linear-gradient(
-    135deg,
-    #EDAA00 0%,
-    #E34D00 50%,
-    #D40E14 100%
-  );
-  --botao-secundario-hover-texto: #FFFFFF;
-
   --botao-default-fundo: #E34D00;
   --botao-default-texto: #FFFBF4;
-  --botao-destrutivo-fundo: #D40E14;
-  --botao-destrutivo-texto: #FFFBF4;
-
-  --botao-whatsapp-fundo: #03A14A;
   --botao-whatsapp-texto: #FFFFFF;
 
   /* ================= CARDS ================= */
-  --card-fundo: #FFFFFF;
-  --card-texto: #200A05;
-  --card-borda: #DECEBC;
   --card-sombra: #00000026;
-  --card-sombra-hover: #E34D0059;
 
   /* ================= TEXTO ================= */
   --texto-principal: #200A05;
-  --texto-secundario: #553B32;
   --texto-acento: #E34D00;
-  --texto-sobre-primario: #FFFBF4;
   --texto-sobre-escuro: #FFFFFF;
-
-  /* ================= FUNDO ================= */
-  --fundo-principal: #FEF9F1;
-  --fundo-secao: #F2EADD;
-  --fundo-secao-suave: #F2EADD66;
-  --fundo-cream: #FBF0E0;
-
-  /* ================= INPUTS ================= */
-  --input-fundo: #FFFFFF;
-  --input-borda: #E9DCCD;
-  --input-texto: #200A05;
-  --input-placeholder: #553B32;
-  --input-ring: #E34D00;
-
-  /* ================= BORDAS / DIVISORES ================= */
-  --borda-padrao: #DECEBC;
-  --divisor: #DECEBC;
 }
 
 .dark {
@@ -202,7 +136,6 @@
   );
 
   /* ================= CARDAPIO ================= */
-  /* --cardapio-fundo: #110604; */
 
   --cardapio-fundo: #18120D;
   --cardapio-card-fundo: #22110D;
@@ -210,13 +143,6 @@
   --cardapio-card-sombra: #00000026;
   --cardapio-card-sombra-hover: #FF932A59;
   --cardapio-preco: #FF932A;
-  --cardapio-tag-fundo: #110604F2;
-  --cardapio-popular-fundo: linear-gradient(
-    135deg,
-    #FFCE43 0%,
-    #FF932A 50%,
-    #FF5549 100%
-  );
 
   /* ================= DIFERENCIAIS ================= */
 
@@ -226,15 +152,11 @@
     #140E09 100%
   );
 
-  --diferenciais-texto: #FEF8ED;
-  --diferenciais-texto-suave: #D0C2AF;
   --diferenciais-card-fundo: #22110D;
   --diferenciais-card-borda: #FFFFFF24;
   --diferenciais-icone: #FF932A;
 
   /* ================= DEPOIMENTOS ================= */
-
-  /* --depoimentos-fundo: #110604; */
 
   --depoimentos-fundo: #18120D;
 
@@ -242,7 +164,6 @@
   --depoimentos-card-borda: #FFFFFF24;
   --depoimentos-card-sombra: #00000026;
   --depoimentos-estrelas: #FFCE43;
-  --depoimentos-texto: #FEF8ED;
   --depoimentos-meta: #D0C2AF;
   --depoimentos-dot-ativo: #FF932A;
   --depoimentos-dot-inativo: #FFFFFF24;
@@ -250,27 +171,16 @@
   /* ================= SOBRE ================= */
   --sobre-fundo: #0A0002;
   --sobre-texto: #FEF8ED;
-  --sobre-texto-suave: #D0C2AF;
   --sobre-card-fundo: #22110D;
   --sobre-card-borda: #FFFFFF24;
   --sobre-stat-numero: #FF932A;
-  --sobre-imagem-glow: linear-gradient(
-    135deg,
-    #FFCE43 0%,
-    #FF932A 50%,
-    #FF5549 100%
-  );
 
   /* ================= CONTATO ================= */
   --contato-fundo: #18120D;
-  --contato-texto: #FEF8ED;
-  --contato-texto-suave: #D0C2AF;
   --contato-card-fundo: #22110D;
   --contato-card-borda: #FFFFFF24;
   --contato-icone: #FF932A;
   --contato-whatsapp: #4BCB71;
-  --contato-input-fundo: #22110D;
-  --contato-input-borda: #FFFFFF2E;
 
   /* ================= FOOTER ================= */
   --footer-fundo: linear-gradient(
@@ -278,18 +188,11 @@
     #1F1710 0%,
     #120D08 100%
   );
-
-
-  --footer-texto: #FEF8ED;
-  --footer-texto-suave: #FEF8ED99;
   --footer-borda: #FFFFFF1A;
-  --footer-link-hover: #FFCE43;
 
   /* ================= NAVBAR ================= */
   --navbar-fundo-scroll: #000000;
-  --navbar-borda: #FFFFFF24;
   --navbar-link: #FEF8ED;
-  --navbar-link-hover: #FF932A;
 
   /* ================= BOTÕES ================= */
   --botao-primario-fundo: linear-gradient(
@@ -298,65 +201,21 @@
     #FF932A 50%,
     #FF5549 100%
   );
-  --botao-primario-hover: linear-gradient(
-    135deg,
-    #FFCE43 0%,
-    #FF932A 50%,
-    #FF5549 100%
-  );
-  --botao-primario-active: #FF932A;
   --botao-primario-texto: #FFFFFF;
   --botao-primario-sombra: #FF932A59;
-  --botao-primario-sombra-hover: #FFCE4366;
-
   --botao-secundario-fundo: #FEF8ED;
-  --botao-secundario-texto: #110604;
-  --botao-secundario-hover-fundo: linear-gradient(
-    135deg,
-    #FFCE43 0%,
-    #FF932A 50%,
-    #FF5549 100%
-  );
-  --botao-secundario-hover-texto: #110604;
-
   --botao-default-fundo: #FF932A;
   --botao-default-texto: #110604;
-  --botao-destrutivo-fundo: #FF5549;
-  --botao-destrutivo-texto: #FFFBF4;
-
-  --botao-whatsapp-fundo: #4BCB71;
   --botao-whatsapp-texto: #FFFFFF;
 
   /* ================= CARDS ================= */
-  --card-fundo: #22110D;
-  --card-texto: #FEF8ED;
   --card-borda: #FFFFFF24;
   --card-sombra: #00000026;
-  --card-sombra-hover: #FF932A59;
 
   /* ================= TEXTO ================= */
   --texto-principal: #FEF8ED;
-  --texto-secundario: #D0C2AF;
   --texto-acento: #FF932A;
-  --texto-sobre-primario: #110604;
   --texto-sobre-escuro: #FFFFFF;
-
-  /* ================= FUNDO ================= */
-  --fundo-principal: #110604;
-  --fundo-secao: #2C1A15;
-  --fundo-secao-suave: #2C1A1566;
-  --fundo-cream: #22110D;
-
-  /* ================= INPUTS ================= */
-  --input-fundo: #22110D;
-  --input-borda: #FFFFFF2E;
-  --input-texto: #FEF8ED;
-  --input-placeholder: #D0C2AF;
-  --input-ring: #FF932A;
-
-  /* ================= BORDAS / DIVISORES ================= */
-  --borda-padrao: #FFFFFF24;
-  --divisor: #FFFFFF24;
 }
 
 * {
@@ -861,6 +720,21 @@ h2 span {
   background: var(--sobre-fundo);
 }
 
+.about-image {
+  position: relative;
+  border-radius: 24px;
+}
+
+.about-image::before {
+  content: '';
+  position: absolute;
+  inset: -8px;
+  background: var(--sobre-imagem-glow);
+  filter: blur(30px);
+  opacity: 0.6;
+  z-index: -1;
+}
+
 .about-image img {
   width: 100%;
   border-radius: 30px;
@@ -882,6 +756,7 @@ h2 span {
 }
 
 .about-text {
+  color: var(--sobre-texto);
   margin-top: 25px;
 }
 
