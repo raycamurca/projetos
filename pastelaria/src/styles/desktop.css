@@ -1,5 +1,6 @@
 section {
   padding: 120px 80px;
+  scroll-margin-top: 10px;
 }
 
 .hero-content .hero-title {
@@ -162,9 +163,4 @@ section {
   flex-direction: row;
   gap: 25px;
   list-style-type: none;
-}
-
-.nav-item a {
-  color: #FFFFFF;
-  font-weight: 500;
 }

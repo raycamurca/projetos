@@ -53,3 +53,23 @@ function showNav() {
 }
 
 // nav menu
+
+const navLinks = document.querySelectorAll("a.nav-link");
+
+navLinks.forEach(link => {
+  link.addEventListener("click", () => {
+    if (nav.classList.contains("ativo")) {
+      showNav();
+    }
+  });
+});
+
+// nav mobile logo
+
+const headerLogo = document.querySelector(".header-logo");
+
+headerLogo.addEventListener("click", () => {
+  if (nav.classList.contains("ativo")) {
+    showNav();
+  }
+});

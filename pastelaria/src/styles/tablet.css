@@ -1,5 +1,6 @@
 section {
   padding: 100px 40px;
+  scroll-margin-top: 15px;
 }
 
 .hero {
@@ -70,11 +71,16 @@ section {
 
 .nav-list {
   flex-direction: row;
-  gap: 20px;
+  gap: 10px;
+}
+
+.nav-list .nav-link {
+  transition: all .4s;
 }
 
 .nav-list .nav-link:hover {
-  color: var(--inicio-destaque);
+  color: var(--texto-acento);
+  font-weight: 700;
 }
 
 .btn-whatsApp {

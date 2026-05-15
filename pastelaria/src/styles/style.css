@@ -4,6 +4,12 @@
 
 
 :root {
+  /* Header */
+
+  --bg-header: #ffffffb2;
+  --oposto: black;
+  --borda: #78553ca3;
+
   /* ================= INICIO / HERO ================= */
   --inicio-fundo-overlay: linear-gradient(
     180deg,
@@ -171,6 +177,12 @@
 }
 
 .dark {
+  /* Header */
+
+  --bg-header: #000000bd;
+  --oposto: white;
+  --borda: #ffffff73;;
+
   /* ================= INICIO / HERO ================= */
   --inicio-fundo-overlay: linear-gradient(
     180deg,
@@ -278,10 +290,6 @@
   --navbar-borda: #FFFFFF24;
   --navbar-link: #FEF8ED;
   --navbar-link-hover: #FF932A;
-
-  /* ============================================================
-     GRUPOS GLOBAIS — DARK
-     ============================================================ */
 
   /* ================= BOTÕES ================= */
   --botao-primario-fundo: linear-gradient(
@@ -461,6 +469,7 @@ i {
 section {
   padding: 80px 20px;
   transition: all .5s;
+  scroll-margin-top: 5px;
 }
 
 .product-card-content {
@@ -536,19 +545,24 @@ h2 span {
 
 /* header */
 
+#theme {
+  color: var(--oposto);
+}
+
 .header {
-  width: 100%;
-  max-height: clamp(80px, 10vw, 110px);
-  background: rgba(0, 0, 0, 0.35);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  position: fixed;
-  top: 0;
-  z-index: 2;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  gap: 10px;
+  width: 100%;
+  background: var(--bg-header);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  position: fixed;
+  top: -1px;
+  z-index: 2;
+  padding: 5px 20px;
+  border-bottom: 1px solid var(--borda);
 }
 
 .header .header-logo {
@@ -558,9 +572,12 @@ h2 span {
   gap: 10px;
 }
 
+.icon {
+  font-size: 30px;
+}
+
 .header-logo p {
   font-weight: 700;
-  color: var(--inicio-titulo);
 }
 
 .top-link {
@@ -576,7 +593,7 @@ h2 span {
 
 
 .header-actions i {
-  color: var(--inicio-titulo);
+  color: var(--oposto);
 }
 
 /* nav */
@@ -606,7 +623,7 @@ h2 span {
 
 .nav-item a {
   color: var(--navbar-link);
-  font-size: clamp(20px, 5vw, 25px);
+  font-size: clamp(16px, 5vw, 20px);
   font-weight: 500;
 }
 
@@ -618,6 +635,7 @@ h2 span {
   padding: 10px;
   border-radius: 20px;
   color: var(--botao-primario-texto);
+  font-weight: 700;
 }
 
 /* hero */
